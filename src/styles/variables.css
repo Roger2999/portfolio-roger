@@ -1,4 +1,5 @@
 :root {
+  /* Colores */
   --color-background: #ffffff;
   --color-primary: #3b82f6;
   --color-secondary: #8b5cf6;
@@ -9,4 +10,9 @@
   --color-error: #ef4444;
   --color-success: #10b981;
   --color-warning: #f59e0b;
+  /* ===== TIPOGRAFÍA ===== */
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    sans-serif;
+  --font-mono: "JetBrains Mono", "Fira Code", monospace;
+  --font-serif: "Georgia", "Times New Roman", serif;
 }
