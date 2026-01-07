@@ -1,3 +1,4 @@
+import { NavMenu } from "./components";
 import { useThemeStore } from "./stores/themeStore";
 
 export const PortfolioApp = () => {
@@ -6,8 +7,10 @@ export const PortfolioApp = () => {
 
   return (
     <div className="app-container flex flex-col h-dvh w-dvw">
-      <header className="header">header</header>
-      <main className="portfolio-container main flex-1">
+      <header className="header flex justify-center items-center fixed top-5 w-full h-20">
+        <NavMenu />
+      </header>
+      <main className="portfolio-container main flex-1 pt-32">
         <h1>Portfolio</h1>
         <button className="btn-theme" onClick={toggleTheme}>
           Cambiar a {theme === "dark" ? "Claro" : "Oscuro"}
