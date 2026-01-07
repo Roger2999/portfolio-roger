@@ -1,0 +1,14 @@
+@import "tailwindcss";
+* {
+  box-sizing: border-box;
+}
+body,
+html {
+  background-color: var(--color-background);
+}
+.btn-theme {
+  background-color: var(--color-btn);
+  border-radius: 2rem;
+  padding: 1rem;
+  color: var(--color-text);
+}
