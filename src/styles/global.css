@@ -8,6 +8,17 @@ body,
 html {
   background-color: var(--color-background);
 }
+header {
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+footer {
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+h1 {
+  color: var(--color-text);
+}
 .btn-theme {
   background-color: var(--color-btn);
   border-radius: 2rem;
