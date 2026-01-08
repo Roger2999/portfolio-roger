@@ -7,7 +7,7 @@ export const NavMenu = () => {
     { id: "1", name: "Home", routes: "#home" },
     { id: "2", name: "Projects", routes: "#projects" },
     { id: "3", name: "Skills", routes: "#skills" },
-    { id: "3", name: "About me", routes: "#about" },
+    { id: "4", name: "About me", routes: "#about" },
   ];
   const [activeLink, setActiveLink] = useState<string>("#home");
   return (

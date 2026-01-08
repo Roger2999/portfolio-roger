@@ -1,10 +1,15 @@
 import { NavMenu } from "./components";
 import { useThemeStore } from "./stores/themeStore";
-
+import iconHamburger from "./assets/icon-hamburger.svg";
+import iconClose from "./assets/icon-close.svg";
+import { useState } from "react";
 export const PortfolioApp = () => {
   const theme = useThemeStore((state) => state.theme);
   const toggleTheme = useThemeStore((state) => state.toggleTheme);
-
+  const [openMenu, setOpenMenu] = useState<boolean>(false);
+  const handleMenu = () => {
+    setOpenMenu(!openMenu);
+  };
   return (
     <div className="app-container flex flex-col h-dvh w-dvw">
       <header className="header flex justify-between items-center absolute top-5 w-full h-20">
@@ -23,7 +28,18 @@ export const PortfolioApp = () => {
           >
             {theme === "dark" ? "Claro" : "Oscuro"}
           </button>
-          <button className="menu-mobile bg-gray-500 sm:hidden">Menu</button>
+          <button onClick={handleMenu} className="menu-mobile sm:hidden">
+            {!openMenu ? (
+              <img
+                src={iconHamburger}
+                alt="hamburger icon"
+                width={30}
+                height={30}
+              />
+            ) : (
+              <img src={iconClose} alt="close icon" width={30} height={30} />
+            )}
+          </button>
         </article>
       </header>
       <main className="portfolio-container main flex-1 pt-32">
