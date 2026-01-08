@@ -13,7 +13,7 @@ export const NavMenu = () => {
   return (
     <>
       <nav
-        className={`nav-desktop-container fixed top-5  z-10 flex justify-center items-center w-125 max-w-[80%] border-2 h-20 rounded-3xl ${
+        className={`  nav-desktop-container  hidden fixed top-5  z-10 sm:flex justify-center items-center w-125 max-w-[60%] border-2 h-20 rounded-3xl ${
           theme === "dark"
             ? "bg-white/20 border-white/20 backdrop-blur-3xl"
             : "bg-white/50 border-gray-400  backdrop-blur-xs"

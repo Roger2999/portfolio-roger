@@ -19,11 +19,6 @@ footer {
 h1 {
   color: var(--color-text);
 }
-
-.btn-theme {
-  background-color: var(--color-btn);
-  border-radius: 100%;
-  width: 5rem;
-  height: 100px;
+p {
   color: var(--color-text);
 }
