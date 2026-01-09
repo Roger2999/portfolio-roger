@@ -4,7 +4,7 @@ import {
   NavMenuMobile,
   ThemeButton,
 } from "./components";
-
+import logoIcon from "./assets/logo.png";
 import { useState } from "react";
 
 export const PortfolioApp = () => {
@@ -23,7 +23,13 @@ export const PortfolioApp = () => {
     <div className="app-container flex flex-col h-dvh w-dvw">
       <header className="header flex justify-between items-center absolute top-5 w-full h-20">
         {/* logo */}
-        <div className="logo bg-gray-300 rounded-full border-4 min-w-10 min-h-10 ml-10"></div>
+        <img
+          src={logoIcon}
+          width={60}
+          height={60}
+          alt="logo de la web"
+          className="logo bg-gray-300 rounded-full ml-10 bg-cover"
+        ></img>
         <article className="nav-container flex justify-center items-center">
           <NavMenuDesktop
             activeLink={activeLink}
@@ -31,7 +37,7 @@ export const PortfolioApp = () => {
             navigation={navigation}
           />
         </article>
-        <article className="flex gap-5 mr-10">
+        <article className="buttons-container flex gap-5 mr-10">
           <ThemeButton />
           <HamburgerButton onOpenMenu={handleMenu} openMenu={openMenu} />
         </article>
