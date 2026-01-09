@@ -1,5 +1,5 @@
-import iconHamburger from "./assets/icon-hamburger.svg";
-import iconClose from "./assets/icon-close.svg";
+import iconHamburger from "../../assets/icon-hamburger.svg";
+import iconClose from "../../assets/icon-close.svg";
 interface Props {
   onOpenMenu: () => void;
   openMenu: boolean;
@@ -7,7 +7,10 @@ interface Props {
 export const HamburgerButton = ({ onOpenMenu, openMenu }: Props) => {
   return (
     <>
-      <button onClick={onOpenMenu} className="menu-mobile sm:hidden">
+      <button
+        onClick={onOpenMenu}
+        className="menu-mobile relative z-20 sm:hidden"
+      >
         {!openMenu ? (
           <img
             src={iconHamburger}
