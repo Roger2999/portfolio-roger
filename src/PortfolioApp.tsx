@@ -25,8 +25,8 @@ export const PortfolioApp = () => {
         {/* logo */}
         <img
           src={logoIcon}
-          width={60}
-          height={60}
+          width={70}
+          height={70}
           alt="logo de la web"
           className="logo bg-gray-300 rounded-full ml-10 bg-cover"
         ></img>
