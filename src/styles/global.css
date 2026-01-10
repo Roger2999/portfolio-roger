@@ -12,14 +12,19 @@ header {
   background-color: var(--color-background);
   color: var(--color-text);
 }
-
+h1 {
+  font-size: var(--font-size-h1);
+  color: var(--color-text);
+}
+section {
+  width: 40rem;
+  max-width: 100%;
+}
+.home p {
+  font-size: var(--font-size-body);
+  color: var(--color-text);
+}
 footer {
   background-color: var(--color-background);
-  color: var(--color-text);
-}
-h1 {
-  color: var(--color-text);
-}
-p {
   color: var(--color-text);
 }
