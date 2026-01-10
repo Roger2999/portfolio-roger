@@ -4,12 +4,16 @@ import {
   NavMenuMobile,
   ThemeButton,
 } from "./components";
-import logoIcon from "./assets/logo.png";
+import logoDarkIcon from "./assets/icon-logo-dark.png";
+import logoLightIcon from "./assets/icon-logo-light.png";
+
 import { useState } from "react";
+import { useThemeStore } from "./stores/themeStore";
 
 export const PortfolioApp = () => {
   const [openMenu, setOpenMenu] = useState<boolean>(false);
   const [activeLink, setActiveLink] = useState<string>("#home");
+  const theme = useThemeStore((state) => state.theme);
   const handleMenu = () => {
     setOpenMenu(!openMenu);
   };
@@ -23,13 +27,24 @@ export const PortfolioApp = () => {
     <div className="app-container flex flex-col h-dvh w-dvw">
       <header className="header flex justify-between items-center absolute top-5 w-full h-20">
         {/* logo */}
-        <img
-          src={logoIcon}
-          width={70}
-          height={70}
-          alt="logo de la web"
-          className="logo bg-gray-300 rounded-full ml-10 bg-cover"
-        ></img>
+        {theme === "dark" ? (
+          <img
+            src={logoDarkIcon}
+            width={50}
+            height={50}
+            alt="logo de la web"
+            className="logo  rounded-full ml-10 bg-cover"
+          ></img>
+        ) : (
+          <img
+            src={logoLightIcon}
+            width={50}
+            height={50}
+            alt="logo de la web"
+            className="logo  rounded-full ml-10 bg-cover"
+          ></img>
+        )}
+
         <article className="nav-container flex justify-center items-center">
           <NavMenuDesktop
             activeLink={activeLink}
@@ -47,6 +62,8 @@ export const PortfolioApp = () => {
           <NavMenuMobile
             activeLink={activeLink}
             setActiveLink={setActiveLink}
+            openMenu={openMenu}
+            setOpenMenu={setOpenMenu}
             navigation={navigation}
           />
         )}
@@ -56,6 +73,330 @@ export const PortfolioApp = () => {
 
         <div className="flex flex-col gap-20">
           <article>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Est harum
+              dicta fugit esse nihil facere, odit voluptas numquam dolorem
+              explicabo. Sapiente reprehenderit odit magnam saepe libero, nam
+              pariatur voluptatibus dolores!
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Est harum
+              dicta fugit esse nihil facere, odit voluptas numquam dolorem
+              explicabo. Sapiente reprehenderit odit magnam saepe libero, nam
+              pariatur voluptatibus dolores!
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Est harum
+              dicta fugit esse nihil facere, odit voluptas numquam dolorem
+              explicabo. Sapiente reprehenderit odit magnam saepe libero, nam
+              pariatur voluptatibus dolores!
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Est harum
+              dicta fugit esse nihil facere, odit voluptas numquam dolorem
+              explicabo. Sapiente reprehenderit odit magnam saepe libero, nam
+              pariatur voluptatibus dolores!
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Est harum
+              dicta fugit esse nihil facere, odit voluptas numquam dolorem
+              explicabo. Sapiente reprehenderit odit magnam saepe libero, nam
+              pariatur voluptatibus dolores!
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Est harum
+              dicta fugit esse nihil facere, odit voluptas numquam dolorem
+              explicabo. Sapiente reprehenderit odit magnam saepe libero, nam
+              pariatur voluptatibus dolores!
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Est harum
+              dicta fugit esse nihil facere, odit voluptas numquam dolorem
+              explicabo. Sapiente reprehenderit odit magnam saepe libero, nam
+              pariatur voluptatibus dolores!
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Est harum
+              dicta fugit esse nihil facere, odit voluptas numquam dolorem
+              explicabo. Sapiente reprehenderit odit magnam saepe libero, nam
+              pariatur voluptatibus dolores!
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Est harum
+              dicta fugit esse nihil facere, odit voluptas numquam dolorem
+              explicabo. Sapiente reprehenderit odit magnam saepe libero, nam
+              pariatur voluptatibus dolores!
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Est harum
+              dicta fugit esse nihil facere, odit voluptas numquam dolorem
+              explicabo. Sapiente reprehenderit odit magnam saepe libero, nam
+              pariatur voluptatibus dolores!
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Est harum
+              dicta fugit esse nihil facere, odit voluptas numquam dolorem
+              explicabo. Sapiente reprehenderit odit magnam saepe libero, nam
+              pariatur voluptatibus dolores!
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Est harum
+              dicta fugit esse nihil facere, odit voluptas numquam dolorem
+              explicabo. Sapiente reprehenderit odit magnam saepe libero, nam
+              pariatur voluptatibus dolores!
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Est harum
+              dicta fugit esse nihil facere, odit voluptas numquam dolorem
+              explicabo. Sapiente reprehenderit odit magnam saepe libero, nam
+              pariatur voluptatibus dolores!
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Est harum
+              dicta fugit esse nihil facere, odit voluptas numquam dolorem
+              explicabo. Sapiente reprehenderit odit magnam saepe libero, nam
+              pariatur voluptatibus dolores!
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Est harum
+              dicta fugit esse nihil facere, odit voluptas numquam dolorem
+              explicabo. Sapiente reprehenderit odit magnam saepe libero, nam
+              pariatur voluptatibus dolores!
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Est harum
+              dicta fugit esse nihil facere, odit voluptas numquam dolorem
+              explicabo. Sapiente reprehenderit odit magnam saepe libero, nam
+              pariatur voluptatibus dolores!
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Est harum
+              dicta fugit esse nihil facere, odit voluptas numquam dolorem
+              explicabo. Sapiente reprehenderit odit magnam saepe libero, nam
+              pariatur voluptatibus dolores!
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Est harum
+              dicta fugit esse nihil facere, odit voluptas numquam dolorem
+              explicabo. Sapiente reprehenderit odit magnam saepe libero, nam
+              pariatur voluptatibus dolores!
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Est harum
+              dicta fugit esse nihil facere, odit voluptas numquam dolorem
+              explicabo. Sapiente reprehenderit odit magnam saepe libero, nam
+              pariatur voluptatibus dolores!
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Est harum
+              dicta fugit esse nihil facere, odit voluptas numquam dolorem
+              explicabo. Sapiente reprehenderit odit magnam saepe libero, nam
+              pariatur voluptatibus dolores!
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Est harum
+              dicta fugit esse nihil facere, odit voluptas numquam dolorem
+              explicabo. Sapiente reprehenderit odit magnam saepe libero, nam
+              pariatur voluptatibus dolores!
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Est harum
+              dicta fugit esse nihil facere, odit voluptas numquam dolorem
+              explicabo. Sapiente reprehenderit odit magnam saepe libero, nam
+              pariatur voluptatibus dolores!
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Est harum
+              dicta fugit esse nihil facere, odit voluptas numquam dolorem
+              explicabo. Sapiente reprehenderit odit magnam saepe libero, nam
+              pariatur voluptatibus dolores!
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Est harum
+              dicta fugit esse nihil facere, odit voluptas numquam dolorem
+              explicabo. Sapiente reprehenderit odit magnam saepe libero, nam
+              pariatur voluptatibus dolores!
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Est harum
+              dicta fugit esse nihil facere, odit voluptas numquam dolorem
+              explicabo. Sapiente reprehenderit odit magnam saepe libero, nam
+              pariatur voluptatibus dolores!
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Est harum
+              dicta fugit esse nihil facere, odit voluptas numquam dolorem
+              explicabo. Sapiente reprehenderit odit magnam saepe libero, nam
+              pariatur voluptatibus dolores!
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Est harum
+              dicta fugit esse nihil facere, odit voluptas numquam dolorem
+              explicabo. Sapiente reprehenderit odit magnam saepe libero, nam
+              pariatur voluptatibus dolores!
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Est harum
+              dicta fugit esse nihil facere, odit voluptas numquam dolorem
+              explicabo. Sapiente reprehenderit odit magnam saepe libero, nam
+              pariatur voluptatibus dolores!
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Est harum
+              dicta fugit esse nihil facere, odit voluptas numquam dolorem
+              explicabo. Sapiente reprehenderit odit magnam saepe libero, nam
+              pariatur voluptatibus dolores!
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Est harum
+              dicta fugit esse nihil facere, odit voluptas numquam dolorem
+              explicabo. Sapiente reprehenderit odit magnam saepe libero, nam
+              pariatur voluptatibus dolores!
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Est harum
+              dicta fugit esse nihil facere, odit voluptas numquam dolorem
+              explicabo. Sapiente reprehenderit odit magnam saepe libero, nam
+              pariatur voluptatibus dolores!
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Est harum
+              dicta fugit esse nihil facere, odit voluptas numquam dolorem
+              explicabo. Sapiente reprehenderit odit magnam saepe libero, nam
+              pariatur voluptatibus dolores!
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Est harum
+              dicta fugit esse nihil facere, odit voluptas numquam dolorem
+              explicabo. Sapiente reprehenderit odit magnam saepe libero, nam
+              pariatur voluptatibus dolores!
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Est harum
+              dicta fugit esse nihil facere, odit voluptas numquam dolorem
+              explicabo. Sapiente reprehenderit odit magnam saepe libero, nam
+              pariatur voluptatibus dolores!
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Est harum
+              dicta fugit esse nihil facere, odit voluptas numquam dolorem
+              explicabo. Sapiente reprehenderit odit magnam saepe libero, nam
+              pariatur voluptatibus dolores!
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Est harum
+              dicta fugit esse nihil facere, odit voluptas numquam dolorem
+              explicabo. Sapiente reprehenderit odit magnam saepe libero, nam
+              pariatur voluptatibus dolores!
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Est harum
+              dicta fugit esse nihil facere, odit voluptas numquam dolorem
+              explicabo. Sapiente reprehenderit odit magnam saepe libero, nam
+              pariatur voluptatibus dolores!
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Est harum
+              dicta fugit esse nihil facere, odit voluptas numquam dolorem
+              explicabo. Sapiente reprehenderit odit magnam saepe libero, nam
+              pariatur voluptatibus dolores!
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Est harum
+              dicta fugit esse nihil facere, odit voluptas numquam dolorem
+              explicabo. Sapiente reprehenderit odit magnam saepe libero, nam
+              pariatur voluptatibus dolores!
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Est harum
+              dicta fugit esse nihil facere, odit voluptas numquam dolorem
+              explicabo. Sapiente reprehenderit odit magnam saepe libero, nam
+              pariatur voluptatibus dolores!
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Est harum
+              dicta fugit esse nihil facere, odit voluptas numquam dolorem
+              explicabo. Sapiente reprehenderit odit magnam saepe libero, nam
+              pariatur voluptatibus dolores!
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Est harum
+              dicta fugit esse nihil facere, odit voluptas numquam dolorem
+              explicabo. Sapiente reprehenderit odit magnam saepe libero, nam
+              pariatur voluptatibus dolores!
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Est harum
+              dicta fugit esse nihil facere, odit voluptas numquam dolorem
+              explicabo. Sapiente reprehenderit odit magnam saepe libero, nam
+              pariatur voluptatibus dolores!
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Est harum
+              dicta fugit esse nihil facere, odit voluptas numquam dolorem
+              explicabo. Sapiente reprehenderit odit magnam saepe libero, nam
+              pariatur voluptatibus dolores!
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Est harum
+              dicta fugit esse nihil facere, odit voluptas numquam dolorem
+              explicabo. Sapiente reprehenderit odit magnam saepe libero, nam
+              pariatur voluptatibus dolores!
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Est harum
+              dicta fugit esse nihil facere, odit voluptas numquam dolorem
+              explicabo. Sapiente reprehenderit odit magnam saepe libero, nam
+              pariatur voluptatibus dolores!
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Est harum
+              dicta fugit esse nihil facere, odit voluptas numquam dolorem
+              explicabo. Sapiente reprehenderit odit magnam saepe libero, nam
+              pariatur voluptatibus dolores!
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Est harum
+              dicta fugit esse nihil facere, odit voluptas numquam dolorem
+              explicabo. Sapiente reprehenderit odit magnam saepe libero, nam
+              pariatur voluptatibus dolores!
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Est harum
+              dicta fugit esse nihil facere, odit voluptas numquam dolorem
+              explicabo. Sapiente reprehenderit odit magnam saepe libero, nam
+              pariatur voluptatibus dolores!
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Est harum
+              dicta fugit esse nihil facere, odit voluptas numquam dolorem
+              explicabo. Sapiente reprehenderit odit magnam saepe libero, nam
+              pariatur voluptatibus dolores!
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Est harum
+              dicta fugit esse nihil facere, odit voluptas numquam dolorem
+              explicabo. Sapiente reprehenderit odit magnam saepe libero, nam
+              pariatur voluptatibus dolores!
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Est harum
+              dicta fugit esse nihil facere, odit voluptas numquam dolorem
+              explicabo. Sapiente reprehenderit odit magnam saepe libero, nam
+              pariatur voluptatibus dolores!
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Est harum
+              dicta fugit esse nihil facere, odit voluptas numquam dolorem
+              explicabo. Sapiente reprehenderit odit magnam saepe libero, nam
+              pariatur voluptatibus dolores!
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Est harum
+              dicta fugit esse nihil facere, odit voluptas numquam dolorem
+              explicabo. Sapiente reprehenderit odit magnam saepe libero, nam
+              pariatur voluptatibus dolores!
+            </p>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Est harum
               dicta fugit esse nihil facere, odit voluptas numquam dolorem
