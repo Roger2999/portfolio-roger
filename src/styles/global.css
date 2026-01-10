@@ -16,9 +16,10 @@ h1 {
   font-size: var(--font-size-h1);
   color: var(--color-text);
 }
-section {
+main section {
   width: 40rem;
   max-width: 100%;
+  min-height: 85dvh;
 }
 .home p {
   font-size: var(--font-size-body);

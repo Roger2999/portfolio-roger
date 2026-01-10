@@ -25,7 +25,7 @@ export const PortfolioApp = () => {
     { id: "4", name: "About me", routes: "#about" },
   ];
   return (
-    <div className="app-container flex flex-col h-dvh w-dvw">
+    <div className="app-container flex flex-col h-dvh w-full">
       <header className="header flex justify-between items-center absolute top-5 w-full h-20">
         {/* logo */}
         {theme === "dark" ? (
@@ -70,6 +70,25 @@ export const PortfolioApp = () => {
         )}
       </aside>
       <main className="portfolio-container main flex-1 pt-32 p-5">
+        <section id="home" className="home flex flex-col gap-5 px-5 m-auto">
+          <h1 className="font-bold">¡Hola, soy Roger!</h1>
+          <p className="text-justify">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
+            mollitia cum consequatur provident aspernatur sapiente, quam
+            molestias veniam perferendis ex blanditiis vel, praesentium velit,
+            cupiditate culpa reiciendis odit officiis repudiandae.
+          </p>
+          <article className="flex gap-8 flex-wrap">
+            <ButtonLink
+              label="Contactame"
+              icon="src/assets/icon-preview-button.png"
+            />
+            <ButtonLink
+              label="GitHub"
+              icon="src/assets/icon-preview-button.png"
+            />
+          </article>
+        </section>
         <section id="home" className="home flex flex-col gap-5 px-5 m-auto">
           <h1 className="font-bold">¡Hola, soy Roger!</h1>
           <p className="text-justify">
