@@ -25,7 +25,7 @@ export const PortfolioApp = () => {
     { id: "4", name: "About me", routes: "#about" },
   ];
   return (
-    <div className="app-container flex flex-col h-dvh w-full">
+    <div className="app-container flex flex-col min-h-dvh w-full">
       <header className="header flex justify-between items-center absolute top-5 w-full h-20">
         {/* logo */}
         {theme === "dark" ? (
