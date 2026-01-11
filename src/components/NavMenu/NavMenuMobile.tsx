@@ -41,8 +41,12 @@ export const NavMenuMobile = ({
     <div
       onClick={handleCloseOverlay}
       className="overlay-menu fixed top-0 right-0 h-dvh w-dvw z-10 backdrop-blur-xs sm:hidden"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="nav-menu-mobile"
     >
       <nav
+        id="nav-menu-mobile"
         onClick={handleMenuPropagation}
         className={`nav-mobile-menu fixed right-0 h-full w-60 max-w-[80%] sm:hidden rounded-l-2xl ${
           theme === "dark"
@@ -59,6 +63,7 @@ export const NavMenuMobile = ({
                 className={`pb-2 ${
                   activeLink === nav.routes ? "border-b-4" : ""
                 }`}
+                aria-current={activeLink === nav.routes ? "page" : undefined}
               >
                 {nav.name}
               </a>
