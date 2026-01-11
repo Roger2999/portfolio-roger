@@ -23,11 +23,12 @@ h3 {
 main section {
   width: 40rem;
   max-width: 100%;
-  height: 85dvh;
+  height: 100dvh;
 }
 #home,
 #projects,
-#skills {
+#skills,
+#about {
   /* PARA QUE EL NAVMENU NO SE SOBREPONGA AL CONTENIDO AL NAVEGAR MEDIANTE LOS LINKS DEL NAV */
   padding-top: 80px; /* Igual a la altura del nav */
   margin-top: -80px; /* Compensa el padding */
