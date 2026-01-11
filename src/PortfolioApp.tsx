@@ -10,20 +10,22 @@ import logoLightIcon from "./assets/icon-logo-light.png";
 
 import { useState } from "react";
 import { useThemeStore } from "./stores/themeStore";
+import { useIntersection } from "./hooks/useIntersection";
 
 export const PortfolioApp = () => {
   const [openMenu, setOpenMenu] = useState<boolean>(false);
-  const [activeLink, setActiveLink] = useState<string>("#home");
   const theme = useThemeStore((state) => state.theme);
   const handleMenu = () => {
     setOpenMenu(!openMenu);
   };
   const navigation = [
-    { id: "1", name: "Home", routes: "#home" },
-    { id: "2", name: "Projects", routes: "#projects" },
-    { id: "3", name: "Skills", routes: "#skills" },
-    { id: "4", name: "About me", routes: "#about" },
+    { id: "1", name: "Home", routes: "home" },
+    { id: "2", name: "Projects", routes: "projects" },
+    { id: "3", name: "Skills", routes: "skills" },
+    { id: "4", name: "About me", routes: "about" },
   ];
+  const section_ids = ["home", "projects", "skills", "about"];
+  const { activeLink, setActiveLink } = useIntersection(section_ids);
   return (
     <div className="app-container flex flex-col min-h-dvh w-full">
       <header className="header flex justify-between items-center absolute top-5 w-full h-20">
@@ -89,7 +91,45 @@ export const PortfolioApp = () => {
             />
           </article>
         </section>
-        <section id="home" className="home flex flex-col gap-5 px-5 m-auto">
+        <section id="projects" className="home flex flex-col gap-5 px-5 m-auto">
+          <h1 className="font-bold">¡Hola, soy Roger!</h1>
+          <p className="text-justify">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
+            mollitia cum consequatur provident aspernatur sapiente, quam
+            molestias veniam perferendis ex blanditiis vel, praesentium velit,
+            cupiditate culpa reiciendis odit officiis repudiandae.
+          </p>
+          <article className="flex gap-8 flex-wrap">
+            <ButtonLink
+              label="Contactame"
+              icon="src/assets/icon-preview-button.png"
+            />
+            <ButtonLink
+              label="GitHub"
+              icon="src/assets/icon-preview-button.png"
+            />
+          </article>
+        </section>
+        <section id="skills" className="home flex flex-col gap-5 px-5 m-auto">
+          <h1 className="font-bold">¡Hola, soy Roger!</h1>
+          <p className="text-justify">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
+            mollitia cum consequatur provident aspernatur sapiente, quam
+            molestias veniam perferendis ex blanditiis vel, praesentium velit,
+            cupiditate culpa reiciendis odit officiis repudiandae.
+          </p>
+          <article className="flex gap-8 flex-wrap">
+            <ButtonLink
+              label="Contactame"
+              icon="src/assets/icon-preview-button.png"
+            />
+            <ButtonLink
+              label="GitHub"
+              icon="src/assets/icon-preview-button.png"
+            />
+          </article>
+        </section>
+        <section id="about" className="home flex flex-col gap-5 px-5 m-auto">
           <h1 className="font-bold">¡Hola, soy Roger!</h1>
           <p className="text-justify">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum

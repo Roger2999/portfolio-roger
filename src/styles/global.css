@@ -19,7 +19,7 @@ h1 {
 main section {
   width: 40rem;
   max-width: 100%;
-  min-height: 85dvh;
+  height: 85dvh;
 }
 .home p {
   font-size: var(--font-size-body);

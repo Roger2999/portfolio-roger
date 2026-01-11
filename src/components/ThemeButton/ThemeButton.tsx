@@ -12,9 +12,13 @@ export const ThemeButton = ({ className, ...props }: ThemeButtonProps) => {
     <>
       <button
         {...props}
-        className={`flex justify-center items-center w-20 h-10 rounded-full border-2 cursor-pointer  ${
+        className={`flex justify-center items-center w-20 h-10 rounded-full border cursor-pointer ${
           className ?? ""
-        } ${theme === "dark" ? " border-white/20" : " border-gray-400"}`}
+        } ${
+          theme === "dark"
+            ? "bg-white/10 border-white/20"
+            : " bg-black/10 border-black/10"
+        }`}
         onClick={toggleTheme}
       >
         {theme === "dark" ? (
@@ -23,8 +27,8 @@ export const ThemeButton = ({ className, ...props }: ThemeButtonProps) => {
             alt="dark theme icon"
             loading="lazy"
             decoding="async"
-            width={30}
-            height={30}
+            width={25}
+            height={25}
           />
         ) : (
           <img
@@ -32,8 +36,8 @@ export const ThemeButton = ({ className, ...props }: ThemeButtonProps) => {
             alt="light theme icon"
             loading="lazy"
             decoding="async"
-            width={30}
-            height={30}
+            width={25}
+            height={25}
           />
         )}
       </button>
