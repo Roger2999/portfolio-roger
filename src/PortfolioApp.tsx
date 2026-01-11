@@ -92,7 +92,7 @@ export const PortfolioApp = () => {
           </article>
         </section>
         <section id="projects" className="home flex flex-col gap-5 px-5 m-auto">
-          <h1 className="font-bold">¡Hola, soy Roger!</h1>
+          <h3 className="font-bold">Proyectos</h3>
           <p className="text-justify">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
             mollitia cum consequatur provident aspernatur sapiente, quam
@@ -111,7 +111,7 @@ export const PortfolioApp = () => {
           </article>
         </section>
         <section id="skills" className="home flex flex-col gap-5 px-5 m-auto">
-          <h1 className="font-bold">¡Hola, soy Roger!</h1>
+          <h3 className="font-bold">Habilidades</h3>
           <p className="text-justify">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
             mollitia cum consequatur provident aspernatur sapiente, quam
@@ -130,7 +130,7 @@ export const PortfolioApp = () => {
           </article>
         </section>
         <section id="about" className="home flex flex-col gap-5 px-5 m-auto">
-          <h1 className="font-bold">¡Hola, soy Roger!</h1>
+          <h3 className="font-bold">Sobre mi</h3>
           <p className="text-justify">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
             mollitia cum consequatur provident aspernatur sapiente, quam
