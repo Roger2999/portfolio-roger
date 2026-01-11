@@ -7,7 +7,8 @@ import {
 } from "./components";
 import logoDarkIcon from "./assets/icon-logo-dark.png";
 import logoLightIcon from "./assets/icon-logo-light.png";
-
+import phoneIcon from "./assets/icon-phone.svg";
+import githubIcon from "./assets/icon-github.svg";
 import { useState } from "react";
 import { useThemeStore } from "./stores/themeStore";
 import { useIntersection } from "./hooks/useIntersection";
@@ -83,11 +84,17 @@ export const PortfolioApp = () => {
           <article className="flex gap-8 flex-wrap">
             <ButtonLink
               label="Contactame"
-              icon="src/assets/icon-preview-button.png"
+              icon={phoneIcon}
+              href="https://wa.me/+5354849352"
+              target="_blank"
+              rel="noopener noreferrer"
             />
             <ButtonLink
               label="GitHub"
-              icon="src/assets/icon-preview-button.png"
+              icon={githubIcon}
+              href="https://github.com/roger2999"
+              target="_blank"
+              rel="noopener noreferrer"
             />
           </article>
         </section>

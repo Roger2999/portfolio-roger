@@ -54,7 +54,7 @@ export const NavMenuMobile = ({
           {navigation.map((nav) => (
             <li key={nav.id}>
               <a
-                href={nav.routes}
+                href={`#${nav.routes}`}
                 onClick={() => setActiveLink(nav.routes)}
                 className={`pb-2 ${
                   activeLink === nav.routes ? "border-b-4" : ""
