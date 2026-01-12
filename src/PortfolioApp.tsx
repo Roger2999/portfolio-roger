@@ -1,35 +1,25 @@
-import {
-  ButtonLink,
-  HamburgerButton,
-  NavMenuDesktop,
-  NavMenuMobile,
-  ThemeButton,
-} from "./components";
 import logoDarkIcon from "./assets/icon-logo-dark.png";
 import logoLightIcon from "./assets/icon-logo-light.png";
 import phoneIcon from "./assets/icon-phone.svg";
 import githubIcon from "./assets/icon-github.svg";
 import profileIcon from "./assets/icon-profile.png";
 import previewIcon from "./assets/icon-preview-button.png";
+import {
+  ButtonLink,
+  HamburgerButton,
+  MiniCard,
+  NavMenuDesktop,
+  NavMenuMobile,
+  TechnologiesSection,
+  ThemeButton,
+} from "./components";
 import { useState } from "react";
 import { useThemeStore } from "./stores/themeStore";
 import { useIntersection } from "./hooks/useIntersection";
+import { getButtonThemeClasses } from "./Helpers/getButtonThemeClasses";
+import { navigation, sectionIds } from "./data/navigation";
 
 // Constantes fuera del componente
-const navigation = [
-  { id: "1", name: "Home", routes: "home" },
-  { id: "2", name: "Projects", routes: "projects" },
-  { id: "3", name: "Skills", routes: "skills" },
-  { id: "4", name: "About me", routes: "about" },
-];
-const sectionIds = ["home", "projects", "skills", "about"];
-
-// Helper function para estilos de botones con tema
-const getButtonThemeClasses = (theme: "light" | "dark"): string => {
-  return theme === "dark"
-    ? "backdrop-blur-md bg-white/30 border-gray-500 hover:bg-white/10 text-gray-200"
-    : "backdrop-blur-md bg-black/10 border-gray-200 hover:bg-black/70 hover:text-white text-gray-800";
-};
 
 export const PortfolioApp = () => {
   const [openMenu, setOpenMenu] = useState<boolean>(false);
@@ -85,14 +75,15 @@ export const PortfolioApp = () => {
       </aside>
       <main className="portfolio-container main flex-1 pt-32 p-5">
         <section id="home" className="home flex flex-col gap-8 px-5 m-auto">
-          <article className="flex items-center gap-5">
-            <img src={profileIcon} width={80} height={80} alt="profile photo" />
+          <MiniCard profilePhoto={profileIcon}>
             <ButtonLink
               href="#"
-              className={`rounded-md h-fit text-sm font-bold ${getButtonThemeClasses(theme)}`}
-              label="Disponible"
+              className={`rounded-md h-fit  text-sm font-bold transition-all duration-200 ease hover:scale-105 ${getButtonThemeClasses(
+                theme
+              )}`}
+              label="Disponible para trabajar"
             />
-          </article>
+          </MiniCard>
           <h1 className="font-bold">¡Hola, soy Roger!</h1>
           <p className="text-justify">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
@@ -100,14 +91,16 @@ export const PortfolioApp = () => {
             molestias veniam perferendis ex blanditiis vel, praesentium velit,
             cupiditate culpa reiciendis odit officiis repudiandae.
           </p>
-          <article className="flex gap-8 flex-wrap">
+          <div className="flex gap-8 flex-wrap">
             <ButtonLink
               label="Contactame"
               icon={phoneIcon}
               href="https://wa.me/+5354849352"
               target="_blank"
               rel="noopener noreferrer"
-              className={getButtonThemeClasses(theme)}
+              className={`transition-all duration-200 ease ${getButtonThemeClasses(
+                theme
+              )}`}
             />
             <ButtonLink
               label="GitHub"
@@ -117,10 +110,11 @@ export const PortfolioApp = () => {
               rel="noopener noreferrer"
               className={getButtonThemeClasses(theme)}
             />
-          </article>
+          </div>
+          <TechnologiesSection />
         </section>
         <section id="projects" className="home flex flex-col gap-5 px-5 m-auto">
-          <h3 className="font-bold">Proyectos</h3>
+          <h2 className="font-bold">Proyectos</h2>
           <p className="text-justify">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
             mollitia cum consequatur provident aspernatur sapiente, quam
@@ -128,14 +122,8 @@ export const PortfolioApp = () => {
             cupiditate culpa reiciendis odit officiis repudiandae.
           </p>
           <article className="buttons-container flex gap-8 flex-wrap">
-            <ButtonLink
-              label="Contactame"
-              icon={previewIcon}
-            />
-            <ButtonLink
-              label="GitHub"
-              icon={previewIcon}
-            />
+            <ButtonLink label="Contactame" icon={previewIcon} />
+            <ButtonLink label="GitHub" icon={previewIcon} />
           </article>
         </section>
         <section id="skills" className="home flex flex-col gap-5 px-5 m-auto">
@@ -147,14 +135,8 @@ export const PortfolioApp = () => {
             cupiditate culpa reiciendis odit officiis repudiandae.
           </p>
           <article className="flex gap-8 flex-wrap">
-            <ButtonLink
-              label="Contactame"
-              icon={previewIcon}
-            />
-            <ButtonLink
-              label="GitHub"
-              icon={previewIcon}
-            />
+            <ButtonLink label="Contactame" icon={previewIcon} />
+            <ButtonLink label="GitHub" icon={previewIcon} />
           </article>
         </section>
         <section id="about" className="home flex flex-col gap-5 px-5 m-auto">
@@ -165,15 +147,21 @@ export const PortfolioApp = () => {
             molestias veniam perferendis ex blanditiis vel, praesentium velit,
             cupiditate culpa reiciendis odit officiis repudiandae.
           </p>
+          <p className="text-justify">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
+            mollitia cum consequatur provident aspernatur sapiente, quam
+            molestias veniam perferendis ex blanditiis vel, praesentium velit,
+            cupiditate culpa reiciendis odit officiis repudiandae.
+          </p>
+          <p className="text-justify">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
+            mollitia cum consequatur provident aspernatur sapiente, quam
+            molestias veniam perferendis ex blanditiis vel, praesentium velit,
+            cupiditate culpa reiciendis odit officiis repudiandae.
+          </p>
           <article className="flex gap-8 flex-wrap">
-            <ButtonLink
-              label="Contactame"
-              icon={previewIcon}
-            />
-            <ButtonLink
-              label="GitHub"
-              icon={previewIcon}
-            />
+            <ButtonLink label="Contactame" icon={previewIcon} />
+            <ButtonLink label="GitHub" icon={previewIcon} />
           </article>
         </section>
       </main>

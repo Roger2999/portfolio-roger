@@ -12,7 +12,7 @@ export const ButtonLink = ({
   return (
     <a
       {...props}
-      className={`btn-link flex gap-3 w-48 p-1 px-5 border rounded-2xl ${
+      className={`btn-link flex gap-3 p-1 px-5 border rounded-2xl ${
         className || ""
       }`}
     >
