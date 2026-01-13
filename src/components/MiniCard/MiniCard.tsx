@@ -1,11 +1,16 @@
+import profileSecondaryPhoto from "../../assets/profile-photo-secondary.png";
 interface Props {
   children: React.ReactNode;
-  profilePhoto: string;
+  profilePhoto?: string;
 }
 export const MiniCard = ({ children, profilePhoto }: Props) => {
   return (
     <div className="flex items-center gap-5">
-      <img src={profilePhoto} width={80} height={80} alt="profile photo" />
+      <img
+        src={profilePhoto ? profilePhoto : profileSecondaryPhoto}
+        alt="profile photo"
+        className="rounded-full w-32 h-38 bg-cover"
+      />
       {children}
     </div>
   );

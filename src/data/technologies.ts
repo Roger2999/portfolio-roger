@@ -1,0 +1,15 @@
+export const technologies = [
+  { name: "TypeScript", icon: "" },
+  { name: "React", icon: "" },
+  { name: "Css Modules", icon: "" },
+  { name: "Tailwindcss", icon: "" },
+  { name: "Bootstrap", icon: "" },
+  { name: "Material UI", icon: "" },
+  { name: "DaisyUI", icon: "" },
+  { name: "Vite", icon: "" },
+  { name: "npm", icon: "" },
+  { name: "pnpm", icon: "" },
+  { name: "bun", icon: "" },
+  { name: "Tanstack Query", icon: "" },
+  { name: "React Router Dom", icon: "" },
+];

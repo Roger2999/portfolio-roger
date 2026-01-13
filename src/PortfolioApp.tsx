@@ -2,7 +2,8 @@ import logoDarkIcon from "./assets/icon-logo-dark.png";
 import logoLightIcon from "./assets/icon-logo-light.png";
 import phoneIcon from "./assets/icon-phone.svg";
 import githubIcon from "./assets/icon-github.svg";
-import profileIcon from "./assets/icon-profile.png";
+import githubDarkIcon from "./assets/icon-github-dark.svg";
+import profileIcon from "./assets/profile-photo.webp";
 import previewIcon from "./assets/icon-preview-button.png";
 import {
   ButtonLink,
@@ -39,7 +40,7 @@ export const PortfolioApp = () => {
             height={50}
             alt="logo de la web"
             className="logo rounded-full ml-10 bg-cover"
-          ></img>
+          />
         ) : (
           <img
             src={logoLightIcon}
@@ -47,7 +48,7 @@ export const PortfolioApp = () => {
             height={50}
             alt="logo de la web"
             className="logo rounded-full ml-10 bg-cover"
-          ></img>
+          />
         )}
 
         <div className="nav-container flex justify-center items-center w-full h-full">
@@ -78,7 +79,7 @@ export const PortfolioApp = () => {
           <MiniCard profilePhoto={profileIcon}>
             <ButtonLink
               href="#"
-              className={`rounded-md h-fit  text-sm font-bold transition-all duration-200 ease hover:scale-105 ${getButtonThemeClasses(
+              className={`rounded-md h-fit  text-sm font-bold hover:scale-105 ${getButtonThemeClasses(
                 theme
               )}`}
               label="Disponible para trabajar"
@@ -98,19 +99,19 @@ export const PortfolioApp = () => {
               href="https://wa.me/+5354849352"
               target="_blank"
               rel="noopener noreferrer"
-              className={`transition-all duration-200 ease ${getButtonThemeClasses(
-                theme
-              )}`}
+              className={`${getButtonThemeClasses(theme)}`}
             />
             <ButtonLink
               label="GitHub"
-              icon={githubIcon}
+              icon={`${theme === "dark" ? githubDarkIcon : githubIcon}`}
               href="https://github.com/roger2999"
               target="_blank"
               rel="noopener noreferrer"
               className={getButtonThemeClasses(theme)}
             />
           </div>
+        </section>
+        <section id="skills" className="home flex flex-col gap-5 px-5 m-auto">
           <TechnologiesSection />
         </section>
         <section id="projects" className="home flex flex-col gap-5 px-5 m-auto">
@@ -126,19 +127,7 @@ export const PortfolioApp = () => {
             <ButtonLink label="GitHub" icon={previewIcon} />
           </article>
         </section>
-        <section id="skills" className="home flex flex-col gap-5 px-5 m-auto">
-          <h3 className="font-bold">Habilidades</h3>
-          <p className="text-justify">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
-            mollitia cum consequatur provident aspernatur sapiente, quam
-            molestias veniam perferendis ex blanditiis vel, praesentium velit,
-            cupiditate culpa reiciendis odit officiis repudiandae.
-          </p>
-          <article className="flex gap-8 flex-wrap">
-            <ButtonLink label="Contactame" icon={previewIcon} />
-            <ButtonLink label="GitHub" icon={previewIcon} />
-          </article>
-        </section>
+
         <section id="about" className="home flex flex-col gap-5 px-5 m-auto">
           <h3 className="font-bold">Sobre mi</h3>
           <p className="text-justify">

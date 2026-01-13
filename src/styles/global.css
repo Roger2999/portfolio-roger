@@ -41,8 +41,16 @@ main section {
   margin-top: -80px; /* Compensa el padding */
 }
 .home p {
-  font-size: var(--font-size-body);
+  font-size: var(--font-size-large);
   color: var(--color-text);
+}
+.links-btn {
+  transition: background-color 0.2s ease;
+}
+.tech-btn {
+  font-size: var(--font-size-medium);
+  color: var(--color-text);
+  background-color: var(--color-surface);
 }
 footer {
   background-color: var(--color-background);
