@@ -1,0 +1,198 @@
+{
+  "meta": {
+    "version": "1.1.0",
+    "lastUpdated": "2026-01-15",
+    "description": "Canonical dataset of modern programming languages, frameworks, libraries and tooling"
+  },
+  "languages": [
+    {
+      "id": "javascript",
+      "name": "JavaScript",
+      "typing": "dynamic",
+      "compiled": false,
+      "useCases": ["frontend", "backend", "mobile"],
+      "ecosystem": ["npm", "pnpm", "bun", "nodejs", "deno"]
+    },
+    {
+      "id": "typescript",
+      "name": "TypeScript",
+      "typing": "static",
+      "compiled": true,
+      "useCases": ["frontend", "backend"]
+    },
+    {
+      "id": "python",
+      "name": "Python",
+      "typing": "dynamic",
+      "compiled": false,
+      "useCases": ["backend", "data-science", "ai"]
+    },
+    {
+      "id": "java",
+      "name": "Java",
+      "typing": "static",
+      "compiled": true,
+      "useCases": ["backend", "enterprise"]
+    },
+    {
+      "id": "go",
+      "name": "Go",
+      "typing": "static",
+      "compiled": true,
+      "useCases": ["backend", "devops"]
+    }
+  ],
+  "frameworks": [
+    {
+      "id": "react",
+      "name": "React",
+      "category": "frontend-framework",
+      "language": "javascript",
+      "released": 2013,
+      "maintainedBy": "Meta",
+      "rendering": ["csr", "ssr"],
+      "useCases": ["spa", "dashboard"]
+    },
+    {
+      "id": "vue",
+      "name": "Vue",
+      "category": "frontend-framework",
+      "language": "javascript",
+      "released": 2014
+    },
+    {
+      "id": "angular",
+      "name": "Angular",
+      "category": "frontend-framework",
+      "language": "typescript",
+      "released": 2016
+    },
+    {
+      "id": "nextjs",
+      "name": "Next.js",
+      "category": "fullstack-framework",
+      "language": "typescript",
+      "released": 2016,
+      "rendering": ["ssr", "ssg", "isr"]
+    },
+    {
+      "id": "nestjs",
+      "name": "NestJS",
+      "category": "backend-framework",
+      "language": "typescript",
+      "released": 2017
+    },
+    {
+      "id": "express",
+      "name": "Express",
+      "category": "backend-framework",
+      "language": "javascript",
+      "released": 2010
+    }
+  ],
+  "libraries": [
+    {
+      "id": "tanstack-query",
+      "name": "TanStack Query",
+      "category": "data-fetching",
+      "language": "typescript",
+      "framework": "react"
+    },
+    {
+      "id": "redux-toolkit",
+      "name": "Redux Toolkit",
+      "category": "state-management",
+      "language": "typescript",
+      "framework": "react"
+    },
+    {
+      "id": "zustand",
+      "name": "Zustand",
+      "category": "state-management",
+      "language": "typescript",
+      "framework": "react"
+    },
+    {
+      "id": "react-router",
+      "name": "React Router",
+      "category": "routing",
+      "language": "typescript",
+      "framework": "react"
+    },
+    {
+      "id": "css-modules",
+      "name": "CSS Modules",
+      "category": "styling",
+      "language": "css",
+      "framework": "react"
+    },
+    {
+      "id": "tailwindcss",
+      "name": "Tailwind CSS",
+      "category": "styling",
+      "language": "javascript"
+    },
+    {
+      "id": "bootstrap",
+      "name": "Bootstrap",
+      "category": "ui-library",
+      "language": "css"
+    },
+    {
+      "id": "material-ui",
+      "name": "Material UI",
+      "category": "ui-library",
+      "language": "typescript",
+      "framework": "react"
+    },
+    {
+      "id": "daisyui",
+      "name": "DaisyUI",
+      "category": "ui-library",
+      "language": "javascript",
+      "framework": "react"
+    },
+    {
+      "id": "axios",
+      "name": "Axios",
+      "category": "http-client",
+      "language": "javascript"
+    },
+    {
+      "id": "zod",
+      "name": "Zod",
+      "category": "validation",
+      "language": "typescript"
+    },
+    {
+      "id": "vitest",
+      "name": "Vitest",
+      "category": "testing",
+      "language": "typescript"
+    },
+    {
+      "id": "vite",
+      "name": "Vite",
+      "category": "build-tool",
+      "language": "typescript"
+    },
+    {
+      "id": "npm",
+      "name": "npm",
+      "category": "package-manager",
+      "language": "javascript"
+    },
+    {
+      "id": "pnpm",
+      "name": "pnpm",
+      "category": "package-manager",
+      "language": "javascript"
+    },
+    {
+      "id": "bun",
+      "name": "Bun",
+      "category": "runtime",
+      "language": "javascript"
+    }
+  ]
+}
