@@ -79,7 +79,7 @@ export const PortfolioApp = () => {
           <MiniCard profilePhoto={profileIcon}>
             <ButtonLink
               href="#"
-              className={`rounded-md h-fit  text-sm font-bold hover:scale-105 ${getButtonThemeClasses(
+              className={`rounded-md h-fit  text-sm font-bold ${getButtonThemeClasses(
                 theme
               )}`}
               label="Disponible para trabajar"

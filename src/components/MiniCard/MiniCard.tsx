@@ -9,7 +9,7 @@ export const MiniCard = ({ children, profilePhoto }: Props) => {
       <img
         src={profilePhoto ? profilePhoto : profileSecondaryPhoto}
         alt="profile photo"
-        className="rounded-full w-32 h-38 bg-cover"
+        className="rounded-full w-28 h-36 bg-cover"
       />
       {children}
     </div>

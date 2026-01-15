@@ -45,7 +45,10 @@ main section {
   color: var(--color-text);
 }
 .links-btn {
-  transition: background-color 0.2s ease;
+  transition: all 0.2s ease;
+}
+.links-btn:active {
+  transform: scale(1.02);
 }
 .tech-btn {
   font-size: var(--font-size-medium);
