@@ -1,16 +1,30 @@
 import tanstackQueryIcon from "../assets/react-query-icon.svg";
+import javascriptIcon from "../assets/javascript-original.svg";
+import typescriptIcon from "../assets/typescript-original.svg";
+import reactIcon from "../assets/react-original.svg";
+import npmIcon from "../assets/npm-original-wordmark.svg";
+import pnpmIcon from "../assets/pnpm.svg";
+import bootstrapIcon from "../assets/bootstrap-original.svg";
+import viteIcon from "../assets/vite.svg";
+import bunIcon from "../assets/bun.svg";
+import materialUIIcon from "../assets/materialui.svg";
+import daisyUIIcon from "../assets/daisyui.svg";
+import tailwindIcon from "../assets/tailwind.svg";
+import reactRouterIcon from "../assets/react-router.svg";
+import reactHookFormIcon from "../assets/react-hook-form.svg";
+import zodIcon from "../assets/zod.svg";
 export const technologies = {
   lenguage: [
     {
       name: "JavaScript",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+      icon: javascriptIcon,
       description:
         "Lenguaje de programación interpretado, orientado a objetos y multiplataforma.",
       url: "https://developer.mozilla.org/es/docs/Web/JavaScript",
     },
     {
       name: "TypeScript",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+      icon: typescriptIcon,
       description: "Superset de JavaScript que añade tipado estático opcional.",
       url: "https://www.typescriptlang.org/",
     },
@@ -19,7 +33,7 @@ export const technologies = {
   frameworks: [
     {
       name: "React",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+      icon: reactIcon,
       description:
         "Biblioteca JavaScript para construir interfaces de usuario.",
       url: "https://reactjs.org/",
@@ -29,7 +43,7 @@ export const technologies = {
   buildTools: [
     {
       name: "Vite",
-      icon: "https://vitejs.dev/logo.svg",
+      icon: viteIcon,
       description: "Herramienta de construcción frontend rápida y optimizada.",
       url: "https://vitejs.dev/",
     },
@@ -38,19 +52,19 @@ export const technologies = {
   packageManagers: [
     {
       name: "npm",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg",
+      icon: npmIcon,
       description: "Gestor de paquetes por defecto para Node.js.",
       url: "https://www.npmjs.com/",
     },
     {
       name: "pnpm",
-      icon: "https://pnpm.io/img/pnpm.svg",
+      icon: pnpmIcon,
       description: "Gestor de paquetes rápido y eficiente en espacio de disco.",
       url: "https://pnpm.io/",
     },
     {
       name: "Bun",
-      icon: "https://bun.sh/logo.svg",
+      icon: bunIcon,
       description: "Runtime, gestor de paquetes y bundler todo en uno.",
       url: "https://bun.sh/",
     },
@@ -59,27 +73,27 @@ export const technologies = {
   uiFrameworks: [
     {
       name: "Material-UI",
-      icon: "https://mui.com/static/logo.svg",
+      icon: materialUIIcon,
       description:
         "Framework de React que implementa Material Design de Google.",
       url: "https://mui.com/",
     },
     {
       name: "DaisyUI",
-      icon: "https://daisyui.com/favicon.ico",
+      icon: daisyUIIcon,
       description: "Framework de componentes para Tailwind CSS.",
       url: "https://daisyui.com/",
     },
     {
       name: "Tailwind CSS",
-      icon: "https://img.icons8.com/?size=100&id=4PiNHtUJVbLs&format=png&color=000000",
+      icon: tailwindIcon,
       description:
         "Framework CSS utility-first para crear diseños personalizados rápidamente.",
       url: "https://tailwindcss.com/",
     },
     {
       name: "Bootstrap",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
+      icon: bootstrapIcon,
       description: "Framework CSS para desarrollo frontend responsive y móvil.",
       url: "https://getbootstrap.com/",
     },
@@ -95,14 +109,14 @@ export const technologies = {
     },
     {
       name: "React Router DOM",
-      icon: "https://reactrouter.com/brand.svg",
+      icon: reactRouterIcon,
       description:
         "Librería de enrutamiento para aplicaciones React en el navegador.",
       url: "https://reactrouter.com/",
     },
     {
       name: "React Hook Form",
-      icon: "https://www.react-hook-form.com/favicon.ico",
+      icon: reactHookFormIcon,
       description:
         "Librería para manejo eficiente de formularios en React con hooks.",
       url: "https://react-hook-form.com/",
@@ -112,7 +126,7 @@ export const technologies = {
   validationLibraries: [
     {
       name: "Zod",
-      icon: "https://zod.dev/logo.svg",
+      icon: zodIcon,
       description: "Librería de validación de esquemas TypeScript-first.",
       url: "https://zod.dev/",
     },
