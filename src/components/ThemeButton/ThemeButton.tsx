@@ -11,7 +11,9 @@ export const ThemeButton = ({ className, ...props }: ThemeButtonProps) => {
   return (
     <button
       {...props}
-      aria-label={theme === "dark" ? "Cambiar a tema claro" : "Cambiar a tema oscuro"}
+      aria-label={
+        theme === "dark" ? "Cambiar a tema claro" : "Cambiar a tema oscuro"
+      }
       className={`flex justify-center items-center w-20 h-10 rounded-full border cursor-pointer ${
         className ?? ""
       } ${

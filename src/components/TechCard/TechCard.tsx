@@ -24,6 +24,7 @@ export const TechCard = <T extends Tech>({ title, data }: Props<T>) => {
         <div className="flex items-center justify-around gap-5 flex-wrap">
           {data?.map((tech) => (
             <ButtonLink
+              key={tech.name}
               label={tech.name}
               icon={tech.icon}
               className={`tech-btn flex-col items-center justify-center hover:scale-120 rounded-xl h-24 min-w-24 px-1`}
