@@ -14,10 +14,10 @@ export const NavMenuDesktop = ({
   return (
     <nav
       className={`nav-desktop-container hidden fixed top-10 z-10 sm:flex justify-center items-center w-125 max-w-[60%] h-10 rounded-3xl ${
-          theme === "dark"
-            ? "bg-white/20 border-white/20 backdrop-blur-xs"
-            : "bg-white/50 backdrop-blur-xs shadow-2xl shadow-gray-800"
-        }`}
+        theme === "dark"
+          ? "bg-white/20 border-white/20 backdrop-blur-xs"
+          : "bg-white/50 backdrop-blur-xs shadow-2xl shadow-gray-800"
+      }`}
     >
       <ul className="flex gap-8 justify-center items-center">
         {navigation.map((nav) => (
