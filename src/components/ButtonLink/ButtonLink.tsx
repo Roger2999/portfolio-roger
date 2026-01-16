@@ -7,15 +7,12 @@ export const ButtonLink = ({
   className,
   label = "label",
   icon,
+
   ...props
 }: ButtonProps) => {
+  const baseClasses = "flex gap-3 rounded-2xl";
   return (
-    <a
-      {...props}
-      className={`links-btn flex gap-3 p-1 px-5 border rounded-2xl ${
-        className || ""
-      }`}
-    >
+    <a {...props} className={`links-btn ${baseClasses} ${className || ""}`}>
       {icon && (
         <img
           src={icon}

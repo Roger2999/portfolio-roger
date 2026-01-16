@@ -79,7 +79,7 @@ export const PortfolioApp = () => {
           <MiniCard profilePhoto={profileIcon}>
             <ButtonLink
               href="#"
-              className={`rounded-md h-fit  text-sm font-bold ${getButtonThemeClasses(
+              className={`rounded-md h-fit py-1 text-sm font-bold px-5 ${getButtonThemeClasses(
                 theme
               )}`}
               label="Disponible para trabajar"
@@ -99,7 +99,7 @@ export const PortfolioApp = () => {
               href="https://wa.me/+5354849352"
               target="_blank"
               rel="noopener noreferrer"
-              className={`${getButtonThemeClasses(theme)}`}
+              className={`px-5 py-1 ${getButtonThemeClasses(theme)}`}
             />
             <ButtonLink
               label="GitHub"
@@ -107,7 +107,7 @@ export const PortfolioApp = () => {
               href="https://github.com/roger2999"
               target="_blank"
               rel="noopener noreferrer"
-              className={getButtonThemeClasses(theme)}
+              className={`px-5 py-1 ${getButtonThemeClasses(theme)}`}
             />
           </div>
         </section>

@@ -1,3 +1,6 @@
+import { useThemeStore } from "../../stores/themeStore";
+import { ButtonLink } from "../ButtonLink/ButtonLink";
+
 interface Tech {
   name: string;
   icon: string;
@@ -9,25 +12,24 @@ interface Props<T extends Tech> {
   data: T[] | undefined;
 }
 export const TechCard = <T extends Tech>({ title, data }: Props<T>) => {
+  const theme = useThemeStore((state) => state.theme);
   return (
     <>
-      <h3>{title}:</h3>
-      <div className="flex gap-0 flex-wrap">
-        {data?.map((tech) => (
-          <div
-            key={tech.name}
-            className="tech-btn flex gap-5 min-w-20 text-center border border-gray-400 px-5 py-1 hover:scale-120 transition-transform duration-200 ease font-semibold"
-          >
-            <img
-              className="w-7 h-7"
-              src={tech.icon}
-              alt={tech.name}
-              width={20}
-              height={20}
+      <div
+        className={`techcard-container p-3 rounded-xl shadow-xl bg-gray-100 border-gray-200 ${
+          theme === "dark" ? "bg-gray-800" : "bg-gray-200"
+        }`}
+      >
+        <h3>{title}:</h3>
+        <div className="flex items-center justify-around gap-5 flex-wrap">
+          {data?.map((tech) => (
+            <ButtonLink
+              label={tech.name}
+              icon={tech.icon}
+              className={`tech-btn flex-col items-center justify-center hover:scale-120 rounded-xl h-24 min-w-24 px-1`}
             />
-            <span className="flex items-center">{tech.name}</span>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </>
   );

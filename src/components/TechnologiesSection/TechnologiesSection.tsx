@@ -6,7 +6,13 @@ export const TechnologiesSection = () => {
   return (
     <>
       <h2>Tecnologías que domino</h2>
-      <div className="flex flex-col gap-1">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. In rem at iure
+        eveniet hic quam, consectetur, aliquid quasi minus perferendis vitae
+        assumenda impedit maiores debitis quibusdam porro! Voluptatem, fugiat
+        sed.
+      </p>
+      <div className="flex flex-wrap gap-5">
         <TechCard title="Lenguajes" data={technologies.lenguage} />
         <TechCard title="Framework" data={technologies.frameworks} />
         <TechCard title="Build" data={technologies.buildTools} />

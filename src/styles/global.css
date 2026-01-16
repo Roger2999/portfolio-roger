@@ -51,11 +51,11 @@ main section {
 .links-btn:active {
   transform: scale(1.02);
 }
+
 .tech-btn {
   font-size: var(--font-size-small);
   color: var(--color-text);
   background-color: var(--color-surface);
-  border-color: var(--color-border-btn);
 }
 footer {
   background-color: var(--color-background);
