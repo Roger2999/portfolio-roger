@@ -116,36 +116,27 @@ export const PortfolioApp = () => {
         </section>
         <section id="projects" className="home flex flex-col gap-5 px-5 m-auto">
           <h2 className="font-bold">Proyectos</h2>
-          <p className="text-justify">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
-            mollitia cum consequatur provident aspernatur sapiente, quam
-            molestias veniam perferendis ex blanditiis vel, praesentium velit,
-            cupiditate culpa reiciendis odit officiis repudiandae.
-          </p>
-          <p className="text-justify">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
-            mollitia cum consequatur provident aspernatur sapiente, quam
-            molestias veniam perferendis ex blanditiis vel, praesentium velit,
-            cupiditate culpa reiciendis odit officiis repudiandae.
-          </p>{" "}
-          <p className="text-justify">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
-            mollitia cum consequatur provident aspernatur sapiente, quam
-            molestias veniam perferendis ex blanditiis vel, praesentium velit,
-            cupiditate culpa reiciendis odit officiis repudiandae.
-          </p>{" "}
-          <p className="text-justify">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
-            mollitia cum consequatur provident aspernatur sapiente, quam
-            molestias veniam perferendis ex blanditiis vel, praesentium velit,
-            cupiditate culpa reiciendis odit officiis repudiandae.
-          </p>{" "}
-          <p className="text-justify">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
-            mollitia cum consequatur provident aspernatur sapiente, quam
-            molestias veniam perferendis ex blanditiis vel, praesentium velit,
-            cupiditate culpa reiciendis odit officiis repudiandae.
-          </p>
+          <div className="grid-rows-3 grid grid-cols-4 md:grid-rows-2 gap-4 text-white">
+            {/* Proyecto Principal - Grande */}
+            <div className="col-span-4 row-span-2 md:col-span-2 md:row-span-2 bg-slate-900 rounded-3xl p-8 border border-slate-800">
+              Proyecto
+            </div>
+
+            {/* Descripcion */}
+            <div className="col-span-2  bg-slate-900 rounded-3xl p-6 border border-slate-800">
+              Ver más
+            </div>
+
+            {/* Skill*/}
+            <div className="md:col-span-1 bg-slate-900 rounded-3xl p-6 border border-slate-800">
+              Skill 1
+            </div>
+
+            {/* Skill */}
+            <div className="md:col-span-1 bg-slate-900 rounded-3xl p-6 border border-slate-800">
+              Skill 2
+            </div>
+          </div>
         </section>
 
         <section id="about" className="home flex flex-col gap-5 px-5 m-auto">
