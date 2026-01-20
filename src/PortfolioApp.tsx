@@ -59,7 +59,7 @@ export const PortfolioApp = () => {
           />
         </div>
         <div className="buttons-container flex gap-5 mr-10">
-          <ThemeButton />
+          <ThemeButton className="sm:hidden" />
           <HamburgerButton onOpenMenu={handleMenu} openMenu={openMenu} />
         </div>
       </header>

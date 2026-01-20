@@ -13,13 +13,13 @@ export const TechnologiesSection = () => {
         sed.
       </p>
       <div className="flex flex-wrap gap-5">
-        <TechCard title="Lenguajes" data={technologies.lenguage} />
-        <TechCard title="Framework" data={technologies.frameworks} />
-        <TechCard title="Build" data={technologies.buildTools} />
+        <TechCard title="Lenguage" data={technologies.lenguage} />
+        <TechCard title="Library" data={technologies.libraries} />
+        <TechCard title="Build tool" data={technologies.buildTools} />
         <TechCard title="UI-Frameworks" data={technologies.uiFrameworks} />
-        <TechCard title="Librerias" data={technologies.reactLibraries} />
-        <TechCard title="Validación" data={technologies.validationLibraries} />
-        <TechCard title="Paquetes" data={technologies.packageManagers} />
+        <TechCard title="React Libreries" data={technologies.reactLibraries} />
+
+        <TechCard title="Package Manager" data={technologies.packageManagers} />
         {/* {isLoading ? (
           <p>Cargando...</p>
         ) : isError ? (

@@ -10,17 +10,17 @@ export const ThemeButton = ({ className, ...props }: ThemeButtonProps) => {
   const toggleTheme = useThemeStore((state) => state.toggleTheme);
   return (
     <button
-      {...props}
-      aria-label={
-        theme === "dark" ? "Cambiar a tema claro" : "Cambiar a tema oscuro"
-      }
       className={`flex justify-center items-center w-20 h-10 rounded-full border cursor-pointer ${
-        className ?? ""
+        className || ""
       } ${
         theme === "dark"
           ? "bg-white/10 border-white/20"
           : "bg-black/10 border-black/10"
       }`}
+      {...props}
+      aria-label={
+        theme === "dark" ? "Cambiar a tema claro" : "Cambiar a tema oscuro"
+      }
       onClick={toggleTheme}
     >
       {theme === "dark" ? (

@@ -5,8 +5,8 @@ export const useIntersection = (sectionsIs: string[]) => {
   useEffect(() => {
     const options: IntersectionObserverInit = {
       root: null,
-      rootMargin: "-60px 0px -50% 0px",
-      threshold: 0.4,
+      rootMargin: "-80px 0px -50% 0px",
+      threshold: 0.1,
     };
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {

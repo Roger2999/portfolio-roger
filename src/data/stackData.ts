@@ -30,7 +30,7 @@ export const technologies = {
     },
   ],
 
-  frameworks: [
+  libraries: [
     {
       name: "React",
       icon: reactIcon,
@@ -121,9 +121,6 @@ export const technologies = {
         "Librería para manejo eficiente de formularios en React con hooks.",
       url: "https://react-hook-form.com/",
     },
-  ],
-
-  validationLibraries: [
     {
       name: "Zod",
       icon: zodIcon,
