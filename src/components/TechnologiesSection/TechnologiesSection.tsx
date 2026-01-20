@@ -20,17 +20,6 @@ export const TechnologiesSection = () => {
         <TechCard title="React Libreries" data={technologies.reactLibraries} />
 
         <TechCard title="Package Manager" data={technologies.packageManagers} />
-        {/* {isLoading ? (
-          <p>Cargando...</p>
-        ) : isError ? (
-          <p>Error: {error?.message}</p>
-        ) : (
-          <>
-            <TechCard title="Lenguajes" data={data?.languages} />
-            <TechCard title="Frameworks" data={data?.frameworks} />
-            <TechCard title="Librerias" data={data?.libraries} />
-          </>
-        )} */}
       </div>
     </>
   );

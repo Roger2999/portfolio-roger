@@ -122,10 +122,30 @@ export const PortfolioApp = () => {
             molestias veniam perferendis ex blanditiis vel, praesentium velit,
             cupiditate culpa reiciendis odit officiis repudiandae.
           </p>
-          <article className="buttons-container flex gap-8 flex-wrap">
-            <ButtonLink label="Contactame" icon={previewIcon} />
-            <ButtonLink label="GitHub" icon={previewIcon} />
-          </article>
+          <p className="text-justify">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
+            mollitia cum consequatur provident aspernatur sapiente, quam
+            molestias veniam perferendis ex blanditiis vel, praesentium velit,
+            cupiditate culpa reiciendis odit officiis repudiandae.
+          </p>{" "}
+          <p className="text-justify">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
+            mollitia cum consequatur provident aspernatur sapiente, quam
+            molestias veniam perferendis ex blanditiis vel, praesentium velit,
+            cupiditate culpa reiciendis odit officiis repudiandae.
+          </p>{" "}
+          <p className="text-justify">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
+            mollitia cum consequatur provident aspernatur sapiente, quam
+            molestias veniam perferendis ex blanditiis vel, praesentium velit,
+            cupiditate culpa reiciendis odit officiis repudiandae.
+          </p>{" "}
+          <p className="text-justify">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
+            mollitia cum consequatur provident aspernatur sapiente, quam
+            molestias veniam perferendis ex blanditiis vel, praesentium velit,
+            cupiditate culpa reiciendis odit officiis repudiandae.
+          </p>
         </section>
 
         <section id="about" className="home flex flex-col gap-5 px-5 m-auto">
