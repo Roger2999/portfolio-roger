@@ -12,7 +12,7 @@ export const TechnologiesSection = () => {
         assumenda impedit maiores debitis quibusdam porro! Voluptatem, fugiat
         sed.
       </p>
-      <div className="flex flex-wrap gap-5">
+      <div className="grid grid-cols-2 gap-5">
         <TechCard title="Lenguage" data={technologies.lenguage} />
         <TechCard title="Library" data={technologies.libraries} />
         <TechCard title="Build tool" data={technologies.buildTools} />

@@ -6,11 +6,11 @@ interface ButtonProps extends React.ComponentPropsWithRef<"a"> {
 export const ButtonLink = ({
   className,
   label = "label",
-  icon,
 
+  icon,
   ...props
 }: ButtonProps) => {
-  const baseClasses = "flex gap-3 rounded-2xl";
+  const baseClasses = "flex rounded-2xl";
   return (
     <a {...props} className={`links-btn ${baseClasses} ${className || ""}`}>
       {icon && (
@@ -19,11 +19,12 @@ export const ButtonLink = ({
           alt="icono de link"
           loading="lazy"
           decoding="async"
-          className="flex items-center justify-center w-8 h-8"
+          className={`flex items-center justify-center w-10 h-8`}
         />
       )}
-
-      <span className="flex items-center justify-center">{label}</span>
+      <span className={`flex items-center justify-center text-xs `}>
+        {label}
+      </span>
     </a>
   );
 };

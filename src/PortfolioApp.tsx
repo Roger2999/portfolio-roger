@@ -80,7 +80,7 @@ export const PortfolioApp = () => {
             <ButtonLink
               href="#"
               className={`rounded-md h-fit py-1 text-sm font-bold px-5 ${getButtonThemeClasses(
-                theme
+                theme,
               )}`}
               label="Disponible para trabajar"
             />
@@ -99,7 +99,7 @@ export const PortfolioApp = () => {
               href="https://wa.me/+5354849352"
               target="_blank"
               rel="noopener noreferrer"
-              className={`px-5 py-1 ${getButtonThemeClasses(theme)}`}
+              className={`px-5 py-1 gap-3 ${getButtonThemeClasses(theme)}`}
             />
             <ButtonLink
               label="GitHub"
@@ -107,11 +107,14 @@ export const PortfolioApp = () => {
               href="https://github.com/roger2999"
               target="_blank"
               rel="noopener noreferrer"
-              className={`px-5 py-1 ${getButtonThemeClasses(theme)}`}
+              className={`px-5 py-1 gap-3 ${getButtonThemeClasses(theme)}`}
             />
           </div>
         </section>
-        <section id="skills" className="home flex flex-col gap-5 px-5 m-auto">
+        <section
+          id="skills"
+          className="home flex flex-col gap-5 m-auto sm:px-5"
+        >
           <TechnologiesSection />
         </section>
         <section id="projects" className="home flex flex-col gap-5 px-5 m-auto">
