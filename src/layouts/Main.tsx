@@ -6,6 +6,7 @@ import profileIcon from "../assets/profile-photo.webp";
 import previewIcon from "../assets/icon-preview-button.png";
 import { useThemeStore } from "../stores/themeStore";
 import { getButtonThemeClasses } from "../Helpers/getButtonThemeClasses";
+
 export const Main = () => {
   const theme = useThemeStore((state) => state.theme);
 
@@ -52,25 +53,39 @@ export const Main = () => {
       </section>
       <section id="projects" className="home flex flex-col gap-5 px-5 m-auto">
         <h2 className="font-bold">Proyectos</h2>
-        <div className="grid-rows-3 grid grid-cols-4 md:grid-rows-2 gap-4 text-white">
-          {/* Proyecto Principal - Grande */}
-          <div className="col-span-4 row-span-2 md:col-span-2 md:row-span-2 bg-slate-900 rounded-3xl p-8 border border-slate-800">
-            Proyecto
-          </div>
-
-          {/* Descripcion */}
-          <div className="col-span-2  bg-slate-900 rounded-3xl p-6 border border-slate-800">
-            Ver más
-          </div>
-
-          {/* Skill*/}
-          <div className="md:col-span-1 bg-slate-900 rounded-3xl p-6 border border-slate-800">
-            Skill 1
-          </div>
-
-          {/* Skill */}
-          <div className="md:col-span-1 bg-slate-900 rounded-3xl p-6 border border-slate-800">
-            Skill 2
+        <div className="projects-grid grid-rows-2 text-white">
+          {/* Imagen del proyecto */}
+          <figure className=" overflow-hidden rounded-3xl">
+            <img
+              src="src\assets\4.webp"
+              alt=""
+              className="w-full h-full bg-cover  rounded-3xl"
+            />
+          </figure>
+          {/* Stack */}
+          <article className="col-span-2 row-end-4 sm:row-auto sm:col-span-1  flex gap-5 flex-wrap bg-slate-900 rounded-3xl p-8 border border-slate-800">
+            <a className="border rounded-2xl" href="">
+              prueba
+            </a>
+            <a className="border rounded-2xl" href="">
+              prueba
+            </a>
+            <a className="border rounded-2xl" href="">
+              prueba
+            </a>
+            <a className="border rounded-2xl" href="">
+              prueba
+            </a>
+          </article>
+          {/* Informacion */}
+          <div className="stack border border-slate-800 rounded-3xl p-8 col-span-2">
+            <h3 className="font-bold text-2xl mb-4">Proyecto 1</h3>
+            <p className="text-justify">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
+              mollitia cum consequatur provident aspernatur sapiente, quam
+              molestias veniam perferendis ex blanditiis vel, praesentium velit,
+              cupiditate culpa reiciendis odit officiis repudiandae.
+            </p>
           </div>
         </div>
       </section>

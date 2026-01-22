@@ -1,6 +1,7 @@
 //import { useGetTechnologies } from "../../hooks/useGetTechnologies";
 import { TechCard } from "../TechCard/TechCard";
 import { technologies } from "../../data/stackData";
+
 export const TechnologiesSection = () => {
   //const { data, isLoading, isError, error } = useGetTechnologies();
   return (
@@ -12,6 +13,7 @@ export const TechnologiesSection = () => {
         assumenda impedit maiores debitis quibusdam porro! Voluptatem, fugiat
         sed.
       </p>
+
       <div className="grid grid-cols-2 gap-5">
         <TechCard title="Lenguage" data={technologies.lenguage} />
         <TechCard title="Library" data={technologies.libraries} />
