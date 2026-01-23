@@ -53,7 +53,10 @@ export const Main = () => {
       <section id="skills" className="home flex flex-col gap-5 m-auto sm:px-5">
         <TechnologiesSection />
       </section>
-      <section id="projects" className="home flex flex-col gap-5 px-5 m-auto">
+      <section
+        id="projects"
+        className="projects flex flex-col gap-5 px-5 m-auto"
+      >
         <h2 className="font-bold">Proyectos</h2>
         {projects.map((p) => (
           <ProjectCard

@@ -1,6 +1,10 @@
 :root {
   /* Colores */
   --color-background: #ffffff;
+  --bg-gradient:linear-gradient(135deg, rgba(58, 50, 50, 0.1) 0%, rgba(168, 113, 113, 0.05) 100%),
+        radial-gradient(circle at 20% 80%, rgba(247, 247, 247, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(163, 167, 160, 0.3) 0%, transparent 50%),
+           linear-gradient(120deg, #030303 0%, #1a1b1b 100%);
   --color-aside-background: #f1f5f9;
   --color-primary: #3b82f6;
   --color-secondary: #8b5cf6;

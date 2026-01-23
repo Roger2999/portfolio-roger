@@ -9,19 +9,21 @@ interface Props {
 export const ProjectCard = ({ title, description, stack, img }: Props) => {
   return (
     <div className={styles.projectContainer}>
-      <figure className={styles.projectImage}>
+      <figure className={`${styles.projectImage} rounded-2xl`}>
         <img
           src={img}
           alt="imagen"
-          className="min-w-10 h-full object-cover object-center"
+          className="object-cover object-center rounded-2xl"
         />
       </figure>
       <div className={styles.projectStack}>
         {stack.map((item) => (
-          <span key={item}>{item}</span>
+          <span className={styles.stackBtn} key={item}>
+            {item}
+          </span>
         ))}
       </div>
-      <div className={styles.projectInfo}>
+      <div className={`${styles.projectInfo}`}>
         <h3>{title}</h3>
         <p>{description}</p>
       </div>

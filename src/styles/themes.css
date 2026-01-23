@@ -2,6 +2,10 @@
   /* Tema claro */
   --color-primary: #a2bde9;
   --color-secondary: #5f30cc;
+  --bg-gradient:linear-gradient(135deg, rgba(58, 50, 50, 0.1) 0%, rgba(168, 113, 113, 0.05) 100%),
+        radial-gradient(circle at 20% 80%, rgba(247, 247, 247, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(163, 167, 160, 0.3) 0%, transparent 50%),
+           linear-gradient(120deg, #030303 0%, #1a1b1b 100%);
   --color-background: #ffffff;
   --color-aside-background: #92a7c0;
   --color-border-btn: #85b1f3;
@@ -19,6 +23,10 @@
   --color-primary: #60a5fa;
   --color-secondary: #a78bfa;
   --color-background: #0f0f0f;
+    --bg-gradient:linear-gradient(135deg, rgba(58, 50, 50, 0.1) 0%, rgba(168, 113, 113, 0.05) 100%),
+        radial-gradient(circle at 20% 80%, rgba(247, 247, 247, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(163, 167, 160, 0.3) 0%, transparent 50%),
+           linear-gradient(120deg, #030303 0%, #1a1b1b 100%);
   --color-border-btn: #6d6fbb;
   --color-aside-background: #051024;
   --color-btn: #b9b1b1;
