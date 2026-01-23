@@ -1,0 +1,81 @@
+.projectContainer {
+  display: grid;
+  gap: 1rem;
+  grid-template-areas:
+    "image"
+    "info"
+    "stack";
+}
+.projectImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: image;
+  width: 100%;
+  height: 100%;
+}
+.projectStack {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 1rem;
+  grid-area: stack;
+}
+.projectStack span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-width: 1px;
+  border-style: ridge;
+  border-color: black;
+  border-radius: 1rem;
+  padding: 5px;
+}
+.projectInfo {
+  grid-area: info;
+}
+@media (min-width: 520px) {
+  .projectContainer {
+    display: grid;
+    gap: 1rem;
+    grid-template-areas:
+      "image stack"
+      "info info";
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-style: solid;
+    border-color: rgb(92, 92, 92);
+    border-width: 0.2rem;
+    border-top: 10px;
+    border-right: 10px;
+    border-left: 10px;
+  }
+  .projectImage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: image;
+  }
+  .projectStack {
+    display: grid;
+    gap: 1rem;
+    align-items: start;
+    grid-template-columns: repeat(auto-fit, minmax(auto, 1fr));
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-area: stack;
+  }
+  .projectStack span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border-width: 1px;
+    border-style: ridge;
+    border-color: black;
+    border-radius: 1rem;
+  }
+
+  .projectInfo {
+    grid-area: info;
+  }
+}
