@@ -1,4 +1,9 @@
+import { ButtonLink } from "../ButtonLink/ButtonLink";
 import styles from "./ProjectCard.module.css";
+import previewIconDark from "../../assets/icon-world-dark.png";
+import previewIconLight from "../../assets/icon-world-light.png";
+import codeIcon from "../../assets/icon-code.png";
+import { useThemeStore } from "../../stores/themeStore";
 
 interface Props {
   title: string;
@@ -7,6 +12,7 @@ interface Props {
   img: string;
 }
 export const ProjectCard = ({ title, description, stack, img }: Props) => {
+  const theme = useThemeStore((state) => state.theme);
   return (
     <div className={styles.projectContainer}>
       <figure className={`${styles.projectImage} rounded-2xl`}>
@@ -22,6 +28,13 @@ export const ProjectCard = ({ title, description, stack, img }: Props) => {
             {item}
           </span>
         ))}
+      </div>
+      <div className={styles.btnContainer}>
+        <ButtonLink
+          label="Preview"
+          icon={theme === "dark" ? previewIconDark : previewIconLight}
+        />
+        <ButtonLink label="Código" icon={codeIcon} />
       </div>
       <div className={`${styles.projectInfo}`}>
         <h3>{title}</h3>
