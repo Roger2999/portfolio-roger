@@ -1,37 +1,32 @@
+import spaceTouristImg from "../assets/Projects/SpaceTourist.webp";
+import openWeatherImg from "../assets/Projects/OpenWeather.webp";
+import portfolioImg from "../assets/Projects/webPortfolio.webp";
 export const projects = [
   {
-    title: "E-commerce EcoShop",
+    title: "Space Tourist",
     description:
       "Sustainable online store that connects local entrepreneurs with conscious consumers. Includes shopping cart, payment gateway, and admin dashboard.",
-    image: "src/assets/pexels-futurekiiid-3551498.jpg",
+    image: spaceTouristImg,
     stack: ["React", "Node.js", "MongoDB", "Stripe", "Tailwind CSS"],
+    urlPreview: "https://space-tourist.vercel.app/",
+    urlGithub: "https://github.com/Roger2999/Space-tourist-app.git",
   },
   {
-    title: "TaskFlow",
+    title: "Open Weather",
     description:
       "Collaborative task manager with Kanban boards, real-time notifications, and productivity metrics for agile teams.",
-    image: "src/assets/pexels-futurekiiid-3551498.jpg",
+    image: openWeatherImg,
     stack: ["Vue 3", "Express", "PostgreSQL", "Socket.io", "Vuetify"],
+    urlPreview: "https://open-weather-cu.vercel.app/",
+    urlGithub: "https://github.com/Roger2999/WeatherApp-v2.git",
   },
   {
-    title: "WeatherLens",
+    title: "Portfolio Website",
     description:
-      "Mobile weather forecast app with interactive visualizations, weather alerts, and personalized recommendations based on location and user plans.",
-    image: "src/assets/pexels-futurekiiid-3551498.jpg",
+      "Personal portfolio website showcasing projects, skills, and experience. Responsive design with dark/light mode toggle and contact form integration.",
+    image: portfolioImg,
     stack: ["Flutter", "Dart", "Firebase", "Charts"],
-  },
-  {
-    title: "CodeShare Live",
-    description:
-      "Collaborative code editor with syntax highlighting, integrated chat, and remote compilation for technical interviews and pair programming.",
-    image: "src/assets/pexels-futurekiiid-3551498.jpg",
-    stack: ["Next.js", "TypeScript", "WebSockets", "Docker", "Monaco Editor"],
-  },
-  {
-    title: "FitTrack Pro",
-    description:
-      "Workout and nutrition tracker with progress analysis, weekly challenges, and community for sharing achievements and healthy recipes.",
-    image: "src/assets/pexels-futurekiiid-3551498.jpg",
-    stack: ["React Native", "GraphQL", "Prisma", "AWS S3", "Chart.js"],
+    urlPreview: "https://roger-web-portfolio.vercel.app/",
+    urlGithub: "https://github.com/Roger2999/Portfolio-2.git",
   },
 ];

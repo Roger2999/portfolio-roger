@@ -63,6 +63,8 @@ export const Main = () => {
             title={p.title}
             description={p.description}
             stack={p.stack}
+            previewLink={p.urlPreview}
+            codeLink={p.urlGithub}
             img={p.image}
             key={p.title}
           />
