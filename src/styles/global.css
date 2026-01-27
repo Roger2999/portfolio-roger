@@ -1,36 +1,113 @@
 @import "tailwindcss";
 @import "./variables.css";
 @import "./themes.css";
+
 * {
   box-sizing: border-box;
 }
+
 body,
 html {
-  background-color: var(--color-background);
-   color: var(--color-text);
+  background: var(--color-background-gradient);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-normal);
+  letter-spacing: var(--letter-spacing-normal);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
+/* ===== ENCABEZADOS ===== */
 h1 {
-  font-family: var(--font-mono);
-  font-size: var(--font-size-h1);
+  font-family: var(--font-sans);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  letter-spacing: var(--letter-spacing-tight);
+  color: var(--color-text);
+  margin-bottom: 1.5rem;
+}
 
-}
 h2 {
-  font-family: var(--font-mono);
+  font-family: var(--font-sans);
   font-size: var(--font-size-h2);
- 
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  letter-spacing: var(--letter-spacing-tight);
+  color: var(--color-text);
+  margin-bottom: 1.25rem;
 }
+
 h3 {
-  font-family: var(--font-mono);
+  font-family: var(--font-sans);
   font-size: var(--font-size-h3);
-  
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-tight);
+  letter-spacing: var(--letter-spacing-tight);
+  color: var(--color-text);
+  margin-bottom: 1rem;
 }
+
+h4 {
+  font-family: var(--font-sans);
+  font-size: var(--font-size-h4);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-normal);
+  letter-spacing: var(--letter-spacing-normal);
+  color: var(--color-text);
+  margin-bottom: 0.875rem;
+}
+
+h5 {
+  font-family: var(--font-sans);
+  font-size: var(--font-size-h5);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-normal);
+  letter-spacing: var(--letter-spacing-normal);
+  color: var(--color-text);
+}
+
+h6 {
+  font-family: var(--font-sans);
+  font-size: var(--font-size-h6);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-normal);
+  letter-spacing: var(--letter-spacing-wide);
+  color: var(--color-text-secondary);
+}
+
+/* ===== PÁRRAFOS Y TEXTO ===== */
+p {
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-text);
+  margin-bottom: 1rem;
+}
+
+/* ===== ENLACES ===== */
+a {
+  text-decoration: none;
+  transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+a:hover {
+  color: var(--color-primary-light);
+  opacity: 0.8;
+}
+
+a:active {
+  color: var(--color-primary-dark);
+}
+
+/* ===== ELEMENTOS ESTRUCTURALES ===== */
 main section {
   width: 40rem;
   max-width: 100%;
   margin-bottom: 5rem;
-  /*min-height: 100dvh;*/
 }
+
 #home,
 #projects,
 #skills,
@@ -39,24 +116,47 @@ main section {
   padding-top: 80px; /* Igual a la altura del nav */
   margin-top: -80px; /* Compensa el padding */
 }
+
+/* ===== ESTILOS DE SECCIONES ===== */
 .home p {
   font-size: var(--font-size-large);
- 
+  line-height: var(--line-height-relaxed);
+  color: var(--color-text-secondary);
 }
+
 .projects p {
   font-size: var(--font-size-medium);
-
+  line-height: var(--line-height-normal);
+  color: var(--color-text-secondary);
 }
+
+/* ===== COMPONENTES ===== */
 .links-btn {
   transition: all 0.2s ease;
+  font-weight: var(--font-weight-medium);
 }
+
 .links-btn:active {
   transform: scale(1.02);
 }
+
 .tech-btn {
   font-size: var(--font-size-small);
+  font-weight: var(--font-weight-medium);
   background-color: var(--color-surface);
+  color: var(--color-text);
+  transition: all 0.2s ease;
 }
+
+.tech-btn:hover {
+  background-color: var(--color-surface-light);
+  transform: translateY(-2px);
+}
+
+/* ===== FOOTER ===== */
 footer {
   background-color: var(--color-background);
+  border-top: 1px solid var(--color-border);
+  font-size: var(--font-size-small);
+  color: var(--color-text-secondary);
 }

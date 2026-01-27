@@ -20,7 +20,7 @@ export const TechCard = <T extends Tech>({ title, data }: Props<T>) => {
           theme === "dark" ? "bg-gray-800" : "bg-gray-200"
         }`}
       >
-        <h3 className="h-16 sm:h-10">{title}:</h3>
+        <h5 className="h-16 sm:h-10">{title}:</h5>
         <div className="tech-content grid grid-cols-2 gap-3">
           {data?.map((tech) => (
             <ButtonLink

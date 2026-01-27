@@ -6,12 +6,11 @@ export const TechnologiesSection = () => {
   //const { data, isLoading, isError, error } = useGetTechnologies();
   return (
     <>
-      <h2>Tecnologías que domino</h2>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. In rem at iure
-        eveniet hic quam, consectetur, aliquid quasi minus perferendis vitae
-        assumenda impedit maiores debitis quibusdam porro! Voluptatem, fugiat
-        sed.
+      <p className="text-justify">
+        Conjunto de tecnologías que utilizo de forma habitual en el desarrollo
+        frontend. Cada una de estas herramientas ha sido seleccionada
+        cuidadosamente para garantizar la eficiencia, calidad y escalabilidad en
+        los proyectos.
       </p>
 
       <div className="grid grid-cols-2 gap-5">
@@ -20,8 +19,8 @@ export const TechnologiesSection = () => {
         <TechCard title="Build tool" data={technologies.buildTools} />
         <TechCard title="UI-Frameworks" data={technologies.uiFrameworks} />
         <TechCard title="React Libreries" data={technologies.reactLibraries} />
-
         <TechCard title="Package Manager" data={technologies.packageManagers} />
+        <TechCard title="Backend as a Service" data={technologies.backend} />
       </div>
     </>
   );

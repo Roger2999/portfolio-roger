@@ -3,7 +3,6 @@ import phoneIcon from "../assets/icon-phone.svg";
 import githubIcon from "../assets/icon-github.svg";
 import githubDarkIcon from "../assets/icon-github-dark.svg";
 import profileIcon from "../assets/profile-photo.webp";
-import previewIcon from "../assets/icon-preview-button.png";
 import { useThemeStore } from "../stores/themeStore";
 import { getButtonThemeClasses } from "../Helpers/getButtonThemeClasses";
 import { projects } from "../data/projectsData";
@@ -24,12 +23,11 @@ export const Main = () => {
             label="Disponible para trabajar"
           />
         </MiniCard>
-        <h1 className="font-bold">¡Hola, soy Roger!</h1>
+        <h1 className="text-4xl sm:text-5xl">¡Hola, soy Roger!</h1>
         <p className="text-justify">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
-          mollitia cum consequatur provident aspernatur sapiente, quam molestias
-          veniam perferendis ex blanditiis vel, praesentium velit, cupiditate
-          culpa reiciendis odit officiis repudiandae.
+          Desarrollador Frontend enfocado en construir interfaces limpias,
+          accesibles y funcionales con React y TypeScript, aplicando buenas
+          prácticas y aprendizaje continuo.
         </p>
         <div className="flex gap-8 flex-wrap">
           <ButtonLink
@@ -51,13 +49,14 @@ export const Main = () => {
         </div>
       </section>
       <section id="skills" className="home flex flex-col gap-5 m-auto sm:px-5">
+        <h3>Tecnologías que domino</h3>
         <TechnologiesSection />
       </section>
       <section
         id="projects"
         className="projects flex flex-col gap-5 px-5 m-auto"
       >
-        <h2 className="font-bold">Proyectos</h2>
+        <h3 className="font-bold">Proyectos</h3>
         {projects.map((p) => (
           <ProjectCard
             title={p.title}
@@ -74,27 +73,11 @@ export const Main = () => {
       <section id="about" className="home flex flex-col gap-5 px-5 m-auto">
         <h3 className="font-bold">Sobre mi</h3>
         <p className="text-justify">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
-          mollitia cum consequatur provident aspernatur sapiente, quam molestias
-          veniam perferendis ex blanditiis vel, praesentium velit, cupiditate
-          culpa reiciendis odit officiis repudiandae.
+          Me encuentro en un proceso de crecimiento como desarrollador, enfocado
+          en fortalecer bases sólidas y aplicar buenas prácticas en cada
+          proyecto. Busco aprender de cada experiencia, adaptarme a nuevos
+          desafíos y aportar valor con soluciones claras y bien estructuradas.
         </p>
-        <p className="text-justify">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
-          mollitia cum consequatur provident aspernatur sapiente, quam molestias
-          veniam perferendis ex blanditiis vel, praesentium velit, cupiditate
-          culpa reiciendis odit officiis repudiandae.
-        </p>
-        <p className="text-justify">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
-          mollitia cum consequatur provident aspernatur sapiente, quam molestias
-          veniam perferendis ex blanditiis vel, praesentium velit, cupiditate
-          culpa reiciendis odit officiis repudiandae.
-        </p>
-        <article className="flex gap-8 flex-wrap">
-          <ButtonLink label="Contactame" icon={previewIcon} />
-          <ButtonLink label="GitHub" icon={previewIcon} />
-        </article>
       </section>
     </main>
   );

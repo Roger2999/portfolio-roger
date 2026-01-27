@@ -24,16 +24,18 @@ export const ProjectCard = ({
   const theme = useThemeStore((state) => state.theme);
   return (
     <div className={styles.projectContainer}>
-      <figure className={`${styles.projectImage} rounded-2xl`}>
-        <img
-          src={img}
-          alt={title}
-          aria-label={title}
-          loading="lazy"
-          decoding="async"
-          className="object-cover object-center rounded-2xl"
-        />
-      </figure>
+      <a href={previewLink} target="_blank" rel="noopener noreferrer">
+        <figure className={`${styles.projectImage} rounded-2xl`}>
+          <img
+            src={img}
+            alt={title}
+            aria-label={title}
+            loading="lazy"
+            decoding="async"
+            className="object-cover object-center rounded-2xl"
+          />
+        </figure>
+      </a>
       <div className={styles.projectStack}>
         {stack.map((item) => (
           <span className={styles.stackBtn} key={item}>
@@ -58,7 +60,7 @@ export const ProjectCard = ({
         />
       </div>
       <div className={`${styles.projectInfo}`}>
-        <h3>{title}</h3>
+        <h5>{title}</h5>
         <p>{description}</p>
       </div>
     </div>

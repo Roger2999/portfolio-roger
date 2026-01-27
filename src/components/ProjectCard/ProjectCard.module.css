@@ -5,8 +5,7 @@
     "image"
     "btns"
     "info"
-    "stack"
-    ; 
+    "stack"; 
     border-style: solid;
     border-color: rgb(92, 92, 92);
     border-width: 0.2rem;
@@ -15,7 +14,6 @@
     border-left: 10px;
     padding-top: 20px;
     padding-bottom: 20px;
-   
 }
 .btnContainer{
   grid-area: btns;
@@ -43,12 +41,8 @@
 .projectImage img{
   width: 100%;
   height: 100%;
-  transition: all 0.3s ease-in-out;
 }
-.projectImage
- img:hover {
-  transform: scale(1.2);
-}
+
 .projectStack {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));

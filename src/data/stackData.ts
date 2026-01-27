@@ -13,6 +13,11 @@ import tailwindIcon from "../assets/tailwind.svg";
 import reactRouterIcon from "../assets/react-router.svg";
 import reactHookFormIcon from "../assets/react-hook-form.svg";
 import zodIcon from "../assets/zod.svg";
+import zustandIcon from "../assets/zustand.svg";
+import supabaseIcon from "../assets/supabase.svg";
+import firebaseIcon from "../assets/firebase.svg";
+import gitIcon from "../assets/git-original.svg";
+import githubIcon from "../assets/github-original.svg";
 export const technologies = {
   lenguage: [
     {
@@ -126,6 +131,46 @@ export const technologies = {
       icon: zodIcon,
       description: "Librería de validación de esquemas TypeScript-first.",
       url: "https://zod.dev/",
+    },
+    {
+      name: "Zustand",
+      icon: zustandIcon,
+      description:
+        "Librería minimalista de manejo de estado global para React con excelente performance.",
+      url: "https://github.com/pmndrs/zustand",
+    },
+  ],
+  backend: [
+    {
+      name: "Supabase",
+      icon: supabaseIcon,
+      description:
+        "Plataforma backend open-source con base de datos PostgreSQL, autenticación y APIs en tiempo real.",
+      url: "https://supabase.com/",
+    },
+    {
+      name: "Firebase",
+      icon: firebaseIcon,
+      description:
+        "Plataforma de Google para desarrollo de aplicaciones con backend serverless, base de datos y autenticación.",
+      url: "https://firebase.google.com/",
+    },
+  ],
+
+  versionControl: [
+    {
+      name: "Git",
+      icon: gitIcon,
+      description:
+        "Sistema de control de versiones distribuido para gestionar cambios en el código.",
+      url: "https://git-scm.com/",
+    },
+    {
+      name: "GitHub",
+      icon: githubIcon,
+      description:
+        "Plataforma de alojamiento de repositorios Git para colaboración y gestión de proyectos.",
+      url: "https://github.com/",
     },
   ],
 };
