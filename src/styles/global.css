@@ -143,13 +143,13 @@ main section {
 .tech-btn {
   font-size: var(--font-size-small);
   font-weight: var(--font-weight-medium);
-  background-color: var(--color-surface);
+  background-color: var(--color-surface-light);
   color: var(--color-text);
   transition: all 0.2s ease;
 }
 
 .tech-btn:hover {
-  background-color: var(--color-surface-light);
+
   transform: translateY(-2px);
 }
 
