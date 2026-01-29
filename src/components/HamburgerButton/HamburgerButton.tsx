@@ -1,7 +1,7 @@
-import iconDarkHamburger from "../../assets/icon-dark-hamburger.png";
-import iconLightHamburger from "../../assets/icon-light-hamburger.png";
+import iconDarkHamburger from "/images/icon-dark-hamburger.png";
+import iconLightHamburger from "/images/icon-light-hamburger.png";
 
-import iconClose from "../../assets/icon-close.svg";
+import iconClose from "/images/icon-close.svg";
 import { useThemeStore } from "../../stores/themeStore";
 interface Props {
   onOpenMenu: () => void;

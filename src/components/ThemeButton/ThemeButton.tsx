@@ -1,6 +1,6 @@
 import { useThemeStore } from "../../stores/themeStore";
-import iconDarkMode from "../../assets/icon-dark.png";
-import iconLightMode from "../../assets/icon-light.png";
+import iconDarkMode from "/images/icon-dark.png";
+import iconLightMode from "/images/icon-light.png";
 interface ThemeButtonProps extends React.ComponentPropsWithRef<"button"> {
   className?: string;
 }

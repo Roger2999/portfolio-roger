@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 
-import logoDarkIcon from "../assets/icon-logo-dark.png";
-import logoLightIcon from "../assets/icon-logo-light.png";
+import logoDarkIcon from "/images/icon-logo-dark.png";
+import logoLightIcon from "/images/icon-logo-light.png";
 import { ThemeImg } from "../components";
 
 interface Props {

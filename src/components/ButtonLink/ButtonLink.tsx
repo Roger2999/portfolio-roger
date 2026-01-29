@@ -25,6 +25,8 @@ export const ButtonLink = ({
           alt="link-icon"
           loading="lazy"
           decoding="async"
+          width={24}
+          height={24}
           {...imgProps}
           className={`flex items-center justify-center ${imgProps?.className || ""}`}
         />

@@ -1,6 +1,6 @@
-import spaceTouristImg from "../assets/Projects/SpaceTourist.webp";
-import openWeatherImg from "../assets/Projects/OpenWeather.webp";
-import portfolioImg from "../assets/Projects/webPortfolio.webp";
+import spaceTouristImg from "/images/Projects/SpaceTourist.webp";
+import openWeatherImg from "/images/Projects/OpenWeather.webp";
+import portfolioImg from "/images/Projects/webPortfolio.webp";
 export const projects = [
   {
     title: "Space Tourist",

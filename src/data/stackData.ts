@@ -1,35 +1,15 @@
-import tanstackQueryIcon from "../assets/react-query-icon.svg";
-import javascriptIcon from "../assets/javascript-original.svg";
-import typescriptIcon from "../assets/typescript-original.svg";
-import reactIcon from "../assets/react-original.svg";
-import npmIcon from "../assets/npm-original-wordmark.svg";
-import pnpmIcon from "../assets/pnpm.svg";
-import bootstrapIcon from "../assets/bootstrap-original.svg";
-import viteIcon from "../assets/vite.svg";
-import bunIcon from "../assets/bun.svg";
-import materialUIIcon from "../assets/materialui.svg";
-import daisyUIIcon from "../assets/daisyui.svg";
-import tailwindIcon from "../assets/tailwind.svg";
-import reactRouterIcon from "../assets/react-router.svg";
-import reactHookFormIcon from "../assets/react-hook-form.svg";
-import zodIcon from "../assets/zod.svg";
-import zustandIcon from "../assets/zustand.svg";
-import supabaseIcon from "../assets/supabase.svg";
-import firebaseIcon from "../assets/firebase.svg";
-import gitIcon from "../assets/git-original.svg";
-import githubIcon from "../assets/github-original.svg";
 export const technologies = {
   lenguage: [
     {
       name: "JavaScript",
-      icon: javascriptIcon,
+      icon: "/images/javascript-original.svg",
       description:
         "Lenguaje de programación interpretado, orientado a objetos y multiplataforma.",
       url: "https://developer.mozilla.org/es/docs/Web/JavaScript",
     },
     {
       name: "TypeScript",
-      icon: typescriptIcon,
+      icon: "/images/typescript-original.svg",
       description: "Superset de JavaScript que añade tipado estático opcional.",
       url: "https://www.typescriptlang.org/",
     },
@@ -38,7 +18,7 @@ export const technologies = {
   libraries: [
     {
       name: "React",
-      icon: reactIcon,
+      icon: "/images/react-original.svg",
       description:
         "Biblioteca JavaScript para construir interfaces de usuario.",
       url: "https://reactjs.org/",
@@ -48,7 +28,7 @@ export const technologies = {
   buildTools: [
     {
       name: "Vite",
-      icon: viteIcon,
+      icon: "/images/vite.svg",
       description: "Herramienta de construcción frontend rápida y optimizada.",
       url: "https://vitejs.dev/",
     },
@@ -57,19 +37,19 @@ export const technologies = {
   packageManagers: [
     {
       name: "npm",
-      icon: npmIcon,
+      icon: "/images/npm-original-wordmark.svg",
       description: "Gestor de paquetes por defecto para Node.js.",
       url: "https://www.npmjs.com/",
     },
     {
       name: "pnpm",
-      icon: pnpmIcon,
+      icon: "/images/pnpm.svg",
       description: "Gestor de paquetes rápido y eficiente en espacio de disco.",
       url: "https://pnpm.io/",
     },
     {
       name: "Bun",
-      icon: bunIcon,
+      icon: "/images/bun.svg",
       description: "Runtime, gestor de paquetes y bundler todo en uno.",
       url: "https://bun.sh/",
     },
@@ -78,27 +58,27 @@ export const technologies = {
   uiFrameworks: [
     {
       name: "Material-UI",
-      icon: materialUIIcon,
+      icon: "/images/materialui.svg",
       description:
         "Framework de React que implementa Material Design de Google.",
       url: "https://mui.com/",
     },
     {
       name: "DaisyUI",
-      icon: daisyUIIcon,
+      icon: "/images/daisyui.svg",
       description: "Framework de componentes para Tailwind CSS.",
       url: "https://daisyui.com/",
     },
     {
       name: "Tailwind CSS",
-      icon: tailwindIcon,
+      icon: "/images/tailwind.svg",
       description:
         "Framework CSS utility-first para crear diseños personalizados rápidamente.",
       url: "https://tailwindcss.com/",
     },
     {
       name: "Bootstrap",
-      icon: bootstrapIcon,
+      icon: "/images/bootstrap-original.svg",
       description: "Framework CSS para desarrollo frontend responsive y móvil.",
       url: "https://getbootstrap.com/",
     },
@@ -107,34 +87,34 @@ export const technologies = {
   reactLibraries: [
     {
       name: "TanStack Query",
-      icon: tanstackQueryIcon,
+      icon: "/images/react-query-icon.svg",
       description:
         "Librería para manejo de estado asíncrono, fetching y caching en React.",
       url: "https://tanstack.com/query",
     },
     {
       name: "React Router DOM",
-      icon: reactRouterIcon,
+      icon: "/images/react-router.svg",
       description:
         "Librería de enrutamiento para aplicaciones React en el navegador.",
       url: "https://reactrouter.com/",
     },
     {
       name: "React Hook Form",
-      icon: reactHookFormIcon,
+      icon: "/images/react-hook-form.svg",
       description:
         "Librería para manejo eficiente de formularios en React con hooks.",
       url: "https://react-hook-form.com/",
     },
     {
       name: "Zod",
-      icon: zodIcon,
+      icon: "/images/zod.svg",
       description: "Librería de validación de esquemas TypeScript-first.",
       url: "https://zod.dev/",
     },
     {
       name: "Zustand",
-      icon: zustandIcon,
+      icon: "/images/zustand.svg",
       description:
         "Librería minimalista de manejo de estado global para React con excelente performance.",
       url: "https://github.com/pmndrs/zustand",
@@ -143,14 +123,14 @@ export const technologies = {
   backend: [
     {
       name: "Supabase",
-      icon: supabaseIcon,
+      icon: "/images/supabase.svg",
       description:
         "Plataforma backend open-source con base de datos PostgreSQL, autenticación y APIs en tiempo real.",
       url: "https://supabase.com/",
     },
     {
       name: "Firebase",
-      icon: firebaseIcon,
+      icon: "/images/firebase.svg",
       description:
         "Plataforma de Google para desarrollo de aplicaciones con backend serverless, base de datos y autenticación.",
       url: "https://firebase.google.com/",
@@ -160,14 +140,14 @@ export const technologies = {
   versionControl: [
     {
       name: "Git",
-      icon: gitIcon,
+      icon: "/images/git-original.svg",
       description:
         "Sistema de control de versiones distribuido para gestionar cambios en el código.",
       url: "https://git-scm.com/",
     },
     {
       name: "GitHub",
-      icon: githubIcon,
+      icon: "/images/github-original.svg",
       description:
         "Plataforma de alojamiento de repositorios Git para colaboración y gestión de proyectos.",
       url: "https://github.com/",

@@ -1,8 +1,8 @@
 import { ButtonLink } from "../ButtonLink/ButtonLink";
 import styles from "./ProjectCard.module.css";
-import previewIconDark from "../../assets/icon-world-dark.png";
-import previewIconLight from "../../assets/icon-world-light.png";
-import codeIcon from "../../assets/icon-code.png";
+import previewIconDark from "/images/icon-world-dark.png";
+import previewIconLight from "/images/icon-world-light.png";
+import codeIcon from "/images/icon-code.png";
 import { useThemeStore } from "../../stores/themeStore";
 import { InViewAnimation } from "../../components";
 
@@ -29,6 +29,8 @@ export const ProjectCard = ({
         <figure className={`${styles.projectImage} rounded-2xl`}>
           <img
             src={img}
+            width={240}
+            height={240}
             alt={title}
             aria-label={title}
             loading="lazy"
@@ -51,6 +53,7 @@ export const ProjectCard = ({
           rel="noopener noreferrer"
           label="Preview"
           icon={theme === "dark" ? previewIconDark : previewIconLight}
+          imgProps={{ className: "w-6 h-6" }}
         />
         <ButtonLink
           href={codeLink}
@@ -58,6 +61,7 @@ export const ProjectCard = ({
           rel="noopener noreferrer"
           label="Código"
           icon={codeIcon}
+          imgProps={{ className: "w-6 h-6" }}
         />
       </div>
       <div className={`${styles.projectInfo}`}>

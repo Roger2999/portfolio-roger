@@ -1,4 +1,4 @@
-import profileSecondaryPhoto from "../../assets/profile-photo-secondary.png";
+import profileSecondaryPhoto from "/images/profile-photo-secondary.png";
 interface Props {
   children: React.ReactNode;
   profilePhoto?: string;

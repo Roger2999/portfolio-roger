@@ -4,12 +4,12 @@ import {
   MiniCard,
   TechnologiesSection,
 } from "../components";
-import phoneIcon from "../assets/icon-phone.svg";
-import githubIcon from "../assets/icon-github.svg";
-import arrowLight from "../assets/arrow-light.svg";
-import arrowDark from "../assets/arrow-dark.svg";
-import githubDarkIcon from "../assets/icon-github-dark.svg";
-import profileIcon from "../assets/profile-photo.webp";
+import phoneIcon from "/images/icon-phone.svg";
+import githubIcon from "/images/icon-github.svg";
+import arrowLight from "/images/arrow-light.svg";
+import arrowDark from "/images/arrow-dark.svg";
+import githubDarkIcon from "/images/icon-github-dark.svg";
+import profileIcon from "/images/profile-photo.webp";
 import { useThemeStore } from "../stores/themeStore";
 import { getButtonThemeClasses } from "../Helpers/getButtonThemeClasses";
 import { projects } from "../data/projectsData";
