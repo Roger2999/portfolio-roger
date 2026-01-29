@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://roger-portfolio-web.vercel.app/sitemap.xml

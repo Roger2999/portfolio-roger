@@ -14,7 +14,7 @@ export const InViewAnimation = ({
   className,
   variants,
   amount = 0.3,
-  once = false,
+  once = true,
 }: Props) => {
   const defaultVariants: Variants = {
     hidden: { opacity: 0, y: 30 },

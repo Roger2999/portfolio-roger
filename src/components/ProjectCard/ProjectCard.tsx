@@ -29,8 +29,8 @@ export const ProjectCard = ({
         <figure className={`${styles.projectImage} rounded-2xl`}>
           <img
             src={img}
-            width={240}
-            height={240}
+            width={300}
+            height={200}
             alt={title}
             aria-label={title}
             loading="lazy"
