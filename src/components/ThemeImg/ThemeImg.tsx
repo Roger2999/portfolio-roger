@@ -16,7 +16,7 @@ export const ThemeImg = ({ srcDark, srcLight, width, heigth }: Props) => {
           width={width}
           height={heigth}
           alt="logo de la web"
-          className="logo rounded-full ml-10 bg-cover"
+          className="logo rounded-full ml-10 bg-cover w-12 h-12"
         />
       ) : (
         <img
@@ -24,7 +24,7 @@ export const ThemeImg = ({ srcDark, srcLight, width, heigth }: Props) => {
           width={width}
           height={heigth}
           alt="logo de la web"
-          className="logo rounded-full ml-10 bg-cover"
+          className="logo rounded-full ml-10 bg-cover w-12 h-12"
         />
       )}
     </>

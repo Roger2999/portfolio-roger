@@ -86,10 +86,12 @@ export const Main = () => {
         <article className="flex flex-col items-center justify-center gap-10 sm:flex-row">
           <img
             src={profileIcon}
-            loading="lazy"
+            width={160}
+            height={192}
+            loading="eager"
             decoding="async"
             alt="profile-photo"
-            className=" object-cover w-60 h-60 rounded-2xl"
+            className=" object-cover max-w-60 max-h-60 rounded-2xl"
           />
           <p className="text-justify">
             Me encuentro en un proceso de crecimiento como desarrollador,

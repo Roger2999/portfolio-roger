@@ -1,7 +1,4 @@
 import type { ReactNode } from "react";
-
-import logoDarkIcon from "/images/icon-logo-dark.png";
-import logoLightIcon from "/images/icon-logo-light.png";
 import { ThemeImg } from "../components";
 
 interface Props {
@@ -12,10 +9,10 @@ export const Header = ({ children }: Props) => {
     <header className="header flex justify-between items-center absolute top-5 w-full h-20">
       {/* logo */}
       <ThemeImg
-        srcDark={logoDarkIcon}
-        srcLight={logoLightIcon}
-        width={50}
-        heigth={50}
+        srcDark={"/images/icon-logo-dark.png"}
+        srcLight={"/images/icon-logo-light.png"}
+        width={75}
+        heigth={75}
       />
       {children}
     </header>
