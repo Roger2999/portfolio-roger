@@ -1,10 +1,13 @@
 import {
+  ButtonLink,
   HamburgerButton,
   NavMenuDesktop,
   NavMenuMobile,
   ThemeButton,
 } from "./components";
 import { Suspense, useState } from "react";
+import arrowDark from "./assets/arrow-dark.svg";
+import arrowLight from "./assets/arrow-light.svg";
 
 import { useIntersection } from "./hooks/useIntersection";
 
@@ -14,12 +17,13 @@ import { Aside } from "./layouts/Aside";
 import { Main } from "./layouts/Main";
 import { Footer } from "./layouts/Footer";
 import { domAnimation, LazyMotion } from "motion/react";
+import { useThemeStore } from "./stores/themeStore";
 
 // Constantes fuera del componente
 
 export const PortfolioApp = () => {
   const [openMenu, setOpenMenu] = useState<boolean>(false);
-
+  const theme = useThemeStore((state) => state.theme);
   const handleMenu = () => {
     setOpenMenu(!openMenu);
   };
@@ -49,9 +53,17 @@ export const PortfolioApp = () => {
         />
       </Aside>
       <LazyMotion features={domAnimation} strict>
-        <Suspense fallback={<div>Cargando...</div>}></Suspense>
+        <Suspense fallback={<div>Cargando...</div>}>
+          <Main />
+        </Suspense>
       </LazyMotion>
-      <Main />
+      <ButtonLink
+        icon={theme === "light" ? arrowDark : arrowLight}
+        imgHeigth="20"
+        imgWidth="20"
+        href="#"
+        className="fixed bottom-10 right-20 opacity-40"
+      />
       <Footer />
     </div>
   );

@@ -8,3 +8,4 @@ export * from "./TechnologiesSection/TechnologiesSection";
 export * from "./TechCard/TechCard";
 export * from "./ThemeImg/ThemeImg";
 export * from "./InViewAnimation/InViewAnimation";
+export * from "./Footer/Footer";

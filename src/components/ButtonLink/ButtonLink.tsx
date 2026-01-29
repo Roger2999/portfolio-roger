@@ -8,9 +8,11 @@ interface ButtonProps extends React.ComponentPropsWithRef<"a"> {
 }
 export const ButtonLink = ({
   className,
-  label = "label",
+  label,
   icon,
   state,
+  imgHeigth = "6",
+  imgWidth = "6",
   ...props
 }: ButtonProps) => {
   const baseClasses = "flex rounded-2xl";
@@ -22,7 +24,7 @@ export const ButtonLink = ({
           alt="icono de link"
           loading="lazy"
           decoding="async"
-          className={`flex items-center justify-center w-6 h-6`}
+          className={`flex items-center justify-center w-${imgWidth} h-${imgHeigth}`}
         />
       )}
       {state && (
@@ -32,9 +34,13 @@ export const ButtonLink = ({
           } animate-ping`}
         />
       )}
-      <span className={`flex justify-center items-center text-center text-xs`}>
-        {label}
-      </span>
+      {label && (
+        <span
+          className={`flex justify-center items-center text-center text-xs`}
+        >
+          {label}
+        </span>
+      )}
     </a>
   );
 };

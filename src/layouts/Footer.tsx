@@ -1,3 +1,5 @@
+import { Footer as FooterComponent } from "../components";
+
 export const Footer = () => {
-  return <footer className="footer">footer</footer>;
+  return <FooterComponent />;
 };

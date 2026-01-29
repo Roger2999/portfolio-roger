@@ -13,12 +13,12 @@ export const Main = () => {
 
   return (
     <main className="portfolio-container main flex-1 pt-32 p-5">
-      <section id="home" className="home flex flex-col gap-8 px-5 m-auto">
+      <section id="home" className="home flex flex-col gap-8 m-auto">
         <MiniCard profilePhoto={profileIcon}>
           <ButtonLink
             href="#"
             className={`gap-3 rounded-md h-fit py-1 text-sm font-bold px-5 ${getButtonThemeClasses(
-              theme
+              theme,
             )}`}
             label="Disponible para trabajar"
             state="available"
