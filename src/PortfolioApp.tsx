@@ -4,7 +4,7 @@ import {
   NavMenuMobile,
   ThemeButton,
 } from "./components";
-import { useState } from "react";
+import { Suspense, useState } from "react";
 
 import { useIntersection } from "./hooks/useIntersection";
 
@@ -13,6 +13,7 @@ import { Header } from "./layouts/Header";
 import { Aside } from "./layouts/Aside";
 import { Main } from "./layouts/Main";
 import { Footer } from "./layouts/Footer";
+import { domAnimation, LazyMotion } from "motion/react";
 
 // Constantes fuera del componente
 
@@ -47,6 +48,9 @@ export const PortfolioApp = () => {
           navigation={navigation}
         />
       </Aside>
+      <LazyMotion features={domAnimation} strict>
+        <Suspense fallback={<div>Cargando...</div>}></Suspense>
+      </LazyMotion>
       <Main />
       <Footer />
     </div>
