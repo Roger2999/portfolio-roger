@@ -1,6 +1,8 @@
 import { ButtonLink, MiniCard, TechnologiesSection } from "../components";
 import phoneIcon from "../assets/icon-phone.svg";
 import githubIcon from "../assets/icon-github.svg";
+import arrowLight from "../assets/arrow-light.svg";
+import arrowDark from "../assets/arrow-dark.svg";
 import githubDarkIcon from "../assets/icon-github-dark.svg";
 import profileIcon from "../assets/profile-photo.webp";
 import { useThemeStore } from "../stores/themeStore";
@@ -39,6 +41,7 @@ export const Main = () => {
             target="_blank"
             rel="noopener noreferrer"
             className={`px-5 py-1 gap-3 ${getButtonThemeClasses(theme)}`}
+            imgProps={{ className: "w-6 h-6" }}
           />
           <ButtonLink
             label="GitHub"
@@ -47,6 +50,7 @@ export const Main = () => {
             target="_blank"
             rel="noopener noreferrer"
             className={`px-5 py-1 gap-3 ${getButtonThemeClasses(theme)}`}
+            imgProps={{ className: "w-6 h-6" }}
           />
         </div>
       </section>
@@ -91,6 +95,13 @@ export const Main = () => {
           </p>
         </article>
       </section>
+      <ButtonLink
+        role="button"
+        icon={theme === "light" ? arrowDark : arrowLight}
+        href="#"
+        className="fixed bottom-10 right-10 opacity-40"
+        imgProps={{ className: "w-20 h-20" }}
+      />
     </main>
   );
 };

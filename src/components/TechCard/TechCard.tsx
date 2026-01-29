@@ -30,6 +30,7 @@ export const TechCard = <T extends Tech>({ title, data }: Props<T>) => {
                 label={tech.name}
                 icon={tech.icon}
                 className={`tech-btn sm:w-auto flex-col items-center justify-center gap-1  hover:scale-110 rounded-xl py-2 sm:p-3`}
+                imgProps={{ className: "w-6 w-6" }}
               />
             ))}
           </div>
