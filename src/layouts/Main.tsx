@@ -1,4 +1,9 @@
-import { ButtonLink, MiniCard, TechnologiesSection } from "../components";
+import {
+  ButtonLink,
+  InViewAnimation,
+  MiniCard,
+  TechnologiesSection,
+} from "../components";
 import phoneIcon from "../assets/icon-phone.svg";
 import githubIcon from "../assets/icon-github.svg";
 import arrowLight from "../assets/arrow-light.svg";
@@ -95,13 +100,17 @@ export const Main = () => {
           </p>
         </article>
       </section>
-      <ButtonLink
-        role="button"
-        icon={theme === "light" ? arrowDark : arrowLight}
-        href="#"
-        className="fixed bottom-10 right-10 opacity-40"
-        imgProps={{ className: "w-20 h-20" }}
-      />
+      <InViewAnimation
+        variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}
+      >
+        <ButtonLink
+          role="button"
+          icon={theme === "light" ? arrowDark : arrowLight}
+          href="#"
+          className="fixed bottom-10 right-10 opacity-40"
+          imgProps={{ className: "w-20 h-20" }}
+        />
+      </InViewAnimation>
     </main>
   );
 };

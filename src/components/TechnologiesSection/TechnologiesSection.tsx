@@ -9,8 +9,8 @@ export const TechnologiesSection = () => {
       <p className="text-justify">
         Conjunto de tecnologías que utilizo de forma habitual en el desarrollo
         frontend. Cada una de estas herramientas ha sido seleccionada
-        cuidadosamente para garantizar la{" "}
-        <strong>eficiencia, calidad y escalabilidad</strong> en los proyectos.
+        cuidadosamente para garantizar la
+        <strong> eficiencia, calidad y escalabilidad</strong> en los proyectos.
       </p>
 
       <div className="grid grid-cols-2 gap-5">
