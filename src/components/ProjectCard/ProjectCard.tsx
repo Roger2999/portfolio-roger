@@ -4,6 +4,7 @@ import previewIconDark from "../../assets/icon-world-dark.png";
 import previewIconLight from "../../assets/icon-world-light.png";
 import codeIcon from "../../assets/icon-code.png";
 import { useThemeStore } from "../../stores/themeStore";
+import { InViewAnimation } from "../../components";
 
 interface Props {
   title: string;
@@ -23,7 +24,7 @@ export const ProjectCard = ({
 }: Props) => {
   const theme = useThemeStore((state) => state.theme);
   return (
-    <div className={styles.projectContainer}>
+    <InViewAnimation className={styles.projectContainer}>
       <a href={previewLink} target="_blank" rel="noopener noreferrer">
         <figure className={`${styles.projectImage} rounded-2xl`}>
           <img
@@ -63,6 +64,6 @@ export const ProjectCard = ({
         <h5>{title}</h5>
         <p>{description}</p>
       </div>
-    </div>
+    </InViewAnimation>
   );
 };

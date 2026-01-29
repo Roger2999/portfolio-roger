@@ -13,7 +13,6 @@ export const InViewAnimation = ({
   children,
   className,
   variants,
-
   amount = 0.3,
   once = false,
 }: Props) => {
