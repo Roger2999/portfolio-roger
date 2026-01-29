@@ -85,6 +85,9 @@ p {
   color: var(--color-text);
   margin-bottom: 1rem;
 }
+strong{
+  color: var(--color-text-strong);
+}
 
 /* ===== ENLACES ===== */
 a {
@@ -149,7 +152,6 @@ main section {
 }
 
 .tech-btn:hover {
-
   transform: translateY(-2px);
 }
 

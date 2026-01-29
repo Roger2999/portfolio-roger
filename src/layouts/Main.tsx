@@ -17,17 +17,19 @@ export const Main = () => {
         <MiniCard profilePhoto={profileIcon}>
           <ButtonLink
             href="#"
-            className={`rounded-md h-fit py-1 text-sm font-bold px-5 ${getButtonThemeClasses(
-              theme,
+            className={`gap-3 rounded-md h-fit py-1 text-sm font-bold px-5 ${getButtonThemeClasses(
+              theme
             )}`}
             label="Disponible para trabajar"
+            state="available"
           />
         </MiniCard>
         <h1 className="text-4xl sm:text-5xl">¡Hola, soy Roger!</h1>
         <p className="text-justify">
-          Desarrollador Frontend enfocado en construir interfaces limpias,
-          accesibles y funcionales con React y TypeScript, aplicando buenas
-          prácticas y aprendizaje continuo.
+          Desarrollador Frontend enfocado en construir{" "}
+          <strong>interfaces limpias, accesibles y funcionales</strong> con
+          <strong> React y TypeScript</strong>, aplicando buenas prácticas y
+          aprendizaje continuo.
         </p>
         <div className="flex gap-8 flex-wrap">
           <ButtonLink
@@ -72,12 +74,22 @@ export const Main = () => {
 
       <section id="about" className="home flex flex-col gap-5 px-5 m-auto">
         <h3 className="font-bold">Sobre mi</h3>
-        <p className="text-justify">
-          Me encuentro en un proceso de crecimiento como desarrollador, enfocado
-          en fortalecer bases sólidas y aplicar buenas prácticas en cada
-          proyecto. Busco aprender de cada experiencia, adaptarme a nuevos
-          desafíos y aportar valor con soluciones claras y bien estructuradas.
-        </p>
+        <article className="flex flex-col items-center justify-center gap-10 sm:flex-row">
+          <img
+            src={profileIcon}
+            loading="lazy"
+            decoding="async"
+            alt="profile-photo"
+            className=" object-cover w-60 h-60 rounded-2xl"
+          />
+          <p className="text-justify">
+            Me encuentro en un proceso de crecimiento como desarrollador,
+            enfocado en fortalecer bases sólidas y aplicar buenas prácticas en
+            cada proyecto. Busco aprender de cada experiencia, adaptarme a
+            nuevos desafíos y aportar valor con soluciones claras y bien
+            estructuradas.
+          </p>
+        </article>
       </section>
     </main>
   );
