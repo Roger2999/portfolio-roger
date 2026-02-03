@@ -17,7 +17,9 @@ html {
   letter-spacing: var(--letter-spacing-normal);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  transition: background 0.3s ease, color 0.3s ease;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
 }
 
 /* ===== ENCABEZADOS ===== */
@@ -85,14 +87,16 @@ p {
   color: var(--color-text);
   margin-bottom: 1rem;
 }
-strong{
+strong {
   color: var(--color-text-strong);
 }
 
 /* ===== ENLACES ===== */
 a {
   text-decoration: none;
-  transition: color 0.2s ease, opacity 0.2s ease;
+  transition:
+    color 0.2s ease,
+    opacity 0.2s ease;
 }
 
 a:hover {

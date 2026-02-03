@@ -1,13 +1,7 @@
-import {
-  ButtonLink,
-  InViewAnimation,
-  MiniCard,
-  TechnologiesSection,
-} from "../components";
+import { ButtonLink, MiniCard, TechnologiesSection } from "../components";
 import phoneIcon from "/images/icon-phone.svg";
 import githubIcon from "/images/icon-github.svg";
-import arrowLight from "/images/arrow-light.svg";
-import arrowDark from "/images/arrow-dark.svg";
+
 import githubDarkIcon from "/images/icon-github-dark.svg";
 import profileIcon from "/images/profile-photo.webp";
 import { useThemeStore } from "../stores/themeStore";
@@ -102,17 +96,6 @@ export const Main = () => {
           </p>
         </article>
       </section>
-      <InViewAnimation
-        variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}
-      >
-        <ButtonLink
-          role="button"
-          icon={theme === "light" ? arrowDark : arrowLight}
-          href="#"
-          className="fixed bottom-10 right-10 opacity-40"
-          imgProps={{ className: "w-20 h-20" }}
-        />
-      </InViewAnimation>
     </main>
   );
 };

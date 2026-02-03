@@ -35,10 +35,9 @@ export const InViewAnimation = ({
       ref={ref}
       className={className || ""}
       variants={variants || defaultVariants}
-      initial="hidden"
-      //whileInView="visible"
-      viewport={{ once, amount, margin: "100px 0px 0px 0px" }}
+      initial="visible"
       animate={isInView ? "visible" : "hidden"}
+      exit={"hidden"}
     >
       {children}
     </motion.div>

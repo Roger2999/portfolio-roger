@@ -1,4 +1,5 @@
 import {
+  BackToTopButton,
   HamburgerButton,
   NavMenuDesktop,
   NavMenuMobile,
@@ -52,6 +53,7 @@ export const PortfolioApp = () => {
       </LazyMotion>
 
       <Footer />
+      <BackToTopButton />
     </div>
   );
 };
