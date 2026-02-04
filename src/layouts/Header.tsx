@@ -12,7 +12,7 @@ export const Header = ({ children }: Props) => {
         srcDark={"/images/icon-logo-dark.png"}
         srcLight={"/images/icon-logo-light.png"}
         width={75}
-        heigth={75}
+        height={75}
       />
       {children}
     </header>

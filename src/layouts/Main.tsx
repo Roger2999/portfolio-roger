@@ -1,8 +1,13 @@
-import { ButtonLink, MiniCard, TechnologiesSection } from "../components";
+import {
+  ButtonLink,
+  MiniCard,
+  ProjectCard,
+  TechnologiesSection,
+} from "../components";
 import { useThemeStore } from "../stores/themeStore";
 import { getButtonThemeClasses } from "../Helpers/getButtonThemeClasses";
 import { projects } from "../data/projectsData";
-import { ProjectCard } from "../components/ProjectCard/ProjectCard";
+
 import { motion } from "motion/react";
 export const Main = () => {
   const theme = useThemeStore((state) => state.theme);
@@ -82,7 +87,7 @@ export const Main = () => {
             initial={{ rotate: 0 }}
             whileHover={{ rotate: 10, opacity: 0.9, scale: 1.05 }}
             transition={{ duration: 0.6 }}
-            src={"/public/images/profile-photo.webp"}
+            src={"/images/profile-photo.webp"}
             width={160}
             height={192}
             loading="eager"

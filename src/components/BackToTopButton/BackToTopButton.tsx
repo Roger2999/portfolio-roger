@@ -15,7 +15,6 @@ export const BackToTopButton = () => {
       className="fixed bottom-10 right-10 opacity-40"
     >
       <ButtonLink
-        role="button"
         icon={theme === "light" ? arrowDark : arrowLight}
         href="#"
         imgProps={{ className: "w-20 h-20" }}

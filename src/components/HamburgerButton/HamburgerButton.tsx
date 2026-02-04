@@ -18,23 +18,13 @@ export const HamburgerButton = ({ onOpenMenu, openMenu }: Props) => {
       aria-controls="nav-menu-mobile"
     >
       {!openMenu ? (
-        theme === "dark" ? (
-          <img
-            src={iconDarkHamburger}
-            width={40}
-            height={40}
-            alt="icono de menú lateral"
-            className="hamburger-menu rounded-full bg-cover"
-          />
-        ) : (
-          <img
-            src={iconLightHamburger}
-            width={40}
-            height={40}
-            alt="icono de menú lateral"
-            className="hamburger-menu rounded-full bg-cover"
-          />
-        )
+        <img
+          src={`${theme === "dark" ? iconDarkHamburger : iconLightHamburger}`}
+          width={40}
+          height={40}
+          alt="icono de menú lateral"
+          className="hamburger-menu rounded-full bg-cover"
+        />
       ) : (
         <img src={iconClose} alt="cerrar menú" width={30} height={30} />
       )}

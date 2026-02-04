@@ -35,7 +35,7 @@ export const InViewAnimation = ({
       ref={ref}
       className={className || ""}
       variants={variants || defaultVariants}
-      initial="visible"
+      initial="hidden"
       animate={isInView ? "visible" : "hidden"}
       exit={"hidden"}
     >

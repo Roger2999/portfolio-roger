@@ -1,5 +1,5 @@
 export const technologies = {
-  lenguage: [
+  language: [
     {
       name: "JavaScript",
       icon: "/images/javascript-original.svg",

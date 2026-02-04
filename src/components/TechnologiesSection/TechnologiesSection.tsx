@@ -14,7 +14,7 @@ export const TechnologiesSection = () => {
       </p>
 
       <div className="grid grid-cols-2 gap-5">
-        <TechCard title="Lenguage" data={technologies.lenguage} />
+        <TechCard title="Lenguage" data={technologies.language} />
         <TechCard title="Library" data={technologies.libraries} />
         <TechCard title="Build tool" data={technologies.buildTools} />
         <TechCard title="UI-Frameworks" data={technologies.uiFrameworks} />
