@@ -1,6 +1,7 @@
 import { useThemeStore } from "../../stores/themeStore";
 import iconDarkMode from "/images/icon-dark.png";
 import iconLightMode from "/images/icon-light.png";
+import { motion, AnimatePresence } from "motion/react";
 interface ThemeButtonProps extends React.ComponentPropsWithRef<"button"> {
   className?: string;
 }
@@ -23,25 +24,35 @@ export const ThemeButton = ({ className, ...props }: ThemeButtonProps) => {
       }
       onClick={toggleTheme}
     >
-      {theme === "dark" ? (
-        <img
-          src={iconLightMode}
-          alt="icono de tema claro"
-          loading="lazy"
-          decoding="async"
-          width={25}
-          height={25}
-        />
-      ) : (
-        <img
-          src={iconDarkMode}
-          alt="icono de tema oscuro"
-          loading="lazy"
-          decoding="async"
-          width={25}
-          height={25}
-        />
-      )}
+      <AnimatePresence mode="wait">
+        {theme === "dark" ? (
+          <motion.img
+            key={"ligth"}
+            initial={{ opacity: 0, rotate: -90 }}
+            animate={{ opacity: 1, rotate: 0 }}
+            exit={{ opacity: 0, rotate: 90 }}
+            src={iconLightMode}
+            alt="icono de tema claro"
+            loading="lazy"
+            decoding="async"
+            width={25}
+            height={25}
+          />
+        ) : (
+          <motion.img
+            key={"dark"}
+            initial={{ opacity: 0, rotate: -90 }}
+            animate={{ opacity: 1, rotate: 0 }}
+            exit={{ opacity: 0, rotate: 90 }}
+            src={iconDarkMode}
+            alt="icono de tema oscuro"
+            loading="lazy"
+            decoding="async"
+            width={25}
+            height={25}
+          />
+        )}
+      </AnimatePresence>
     </button>
   );
 };
