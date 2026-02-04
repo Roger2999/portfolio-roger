@@ -1,23 +1,20 @@
 import { ButtonLink, MiniCard, TechnologiesSection } from "../components";
-import phoneIcon from "/images/icon-phone.svg";
-import githubIcon from "/images/icon-github.svg";
-
-import githubDarkIcon from "/images/icon-github-dark.svg";
-import profileIcon from "/images/profile-photo.webp";
 import { useThemeStore } from "../stores/themeStore";
 import { getButtonThemeClasses } from "../Helpers/getButtonThemeClasses";
 import { projects } from "../data/projectsData";
 import { ProjectCard } from "../components/ProjectCard/ProjectCard";
-
+import { motion } from "motion/react";
 export const Main = () => {
   const theme = useThemeStore((state) => state.theme);
 
   return (
     <main className="portfolio-container main flex-1 pt-32 p-5">
       <section id="home" className="home flex flex-col gap-8 m-auto">
-        <MiniCard profilePhoto={profileIcon}>
+        <MiniCard profilePhoto={"/images/profile-photo.webp"}>
           <ButtonLink
-            href="#"
+            href="https://www.linkedin.com/in/roger-gutierrez-martinez"
+            target="_blank"
+            rel="noopener noreferrer"
             className={`gap-3 rounded-md h-fit py-1 text-sm font-bold px-5 ${getButtonThemeClasses(
               theme,
             )}`}
@@ -35,7 +32,7 @@ export const Main = () => {
         <div className="flex gap-8 flex-wrap">
           <ButtonLink
             label="Contactame"
-            icon={phoneIcon}
+            icon={"/images/icon-phone.svg"}
             href="https://wa.me/+5354849352"
             target="_blank"
             rel="noopener noreferrer"
@@ -44,7 +41,7 @@ export const Main = () => {
           />
           <ButtonLink
             label="GitHub"
-            icon={`${theme === "dark" ? githubDarkIcon : githubIcon}`}
+            icon={`${theme === "dark" ? "/images/icon-github-dark.svg" : "/images/icon-github.svg"}`}
             href="https://github.com/roger2999"
             target="_blank"
             rel="noopener noreferrer"
@@ -53,7 +50,10 @@ export const Main = () => {
           />
         </div>
       </section>
-      <section id="skills" className="home flex flex-col gap-5 m-auto sm:px-5">
+      <section
+        id="skills"
+        className="skills flex flex-col gap-5 m-auto sm:px-5"
+      >
         <h3>Tecnologías que domino</h3>
         <TechnologiesSection />
       </section>
@@ -75,11 +75,14 @@ export const Main = () => {
         ))}
       </section>
 
-      <section id="about" className="home flex flex-col gap-5 px-5 m-auto">
+      <section id="about" className="about flex flex-col gap-5 px-5 m-auto">
         <h3 className="font-bold">Sobre mi</h3>
         <article className="flex flex-col items-center justify-center gap-10 sm:flex-row">
-          <img
-            src={profileIcon}
+          <motion.img
+            initial={{ rotate: 0 }}
+            whileHover={{ rotate: 10, opacity: 0.9, scale: 1.05 }}
+            transition={{ duration: 0.6 }}
+            src={"/public/images/profile-photo.webp"}
             width={160}
             height={192}
             loading="eager"
