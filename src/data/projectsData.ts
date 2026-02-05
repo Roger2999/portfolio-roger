@@ -7,7 +7,7 @@ export const projects = [
     description:
       "Una experiencia inmersiva para explorar destinos espaciales, conocer a la tripulación y descubrir la tecnología utilizada en misiones espaciales.",
     image: spaceTouristImg,
-    stack: ["React", "TypeScript", "Tailwind CSS", " Vite", "Zustand"],
+    stack: ["React", "TypeScript", "Tailwind CSS", "Vite", "Zustand"],
     urlPreview: "https://space-tourist.vercel.app/",
     urlGithub: "https://github.com/Roger2999/Space-tourist-app.git",
   },
