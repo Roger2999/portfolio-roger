@@ -9,14 +9,12 @@ export const ThemeImg = ({ srcDark, srcLight, width, height }: Props) => {
   const theme = useThemeStore((state) => state.theme);
 
   return (
-    <>
-      <img
-        src={theme === "dark" ? srcDark : srcLight}
-        width={width}
-        height={height}
-        alt="logo de la web"
-        className="logo rounded-full ml-10 bg-cover w-12 h-12"
-      />
-    </>
+    <img
+      src={theme === "dark" ? srcDark : srcLight}
+      width={width}
+      height={height}
+      alt="logo de la web"
+      className="logo rounded-full ml-10 bg-cover w-12 h-12"
+    />
   );
 };

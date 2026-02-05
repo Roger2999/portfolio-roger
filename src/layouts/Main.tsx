@@ -5,7 +5,7 @@ import {
   TechnologiesSection,
 } from "../components";
 import { useThemeStore } from "../stores/themeStore";
-import { getButtonThemeClasses } from "../Helpers/getButtonThemeClasses";
+import { getButtonThemeClasses } from "../helpers/getButtonThemeClasses";
 import { projects } from "../data/projectsData";
 
 import { motion } from "motion/react";
