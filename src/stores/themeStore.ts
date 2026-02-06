@@ -14,8 +14,8 @@ const getPreferredTheme = (): Theme => {
   return theme_item
     ? theme_item
     : window.matchMedia("(prefers-color-scheme: dark)").matches
-    ? "dark"
-    : "light";
+      ? "dark"
+      : "light";
 };
 
 export const useThemeStore = create(
@@ -39,14 +39,15 @@ export const useThemeStore = create(
           document.documentElement.setAttribute("data-theme", theme);
         }
       },
-    }
-  )
+    },
+  ),
 );
 
-// Apply theme to document immediately to avoid a flash before rehydration
+// Apply theme synchronously in a script tag before React hydration to prevent FOUC
+// This is handled by index.html inline script
 if (typeof document !== "undefined") {
-  document.documentElement.setAttribute(
-    "data-theme",
-    useThemeStore.getState().theme
-  );
+  // Ensure theme is applied if not already set by inline script
+  if (!document.documentElement.getAttribute("data-theme")) {
+    document.documentElement.setAttribute("data-theme", getPreferredTheme());
+  }
 }

@@ -28,7 +28,7 @@ export const technologies = {
   buildTools: [
     {
       name: "Vite",
-      icon: "/images/vite.svg",
+      icon: "/images/vite-optimized.svg",
       description: "Herramienta de construcción frontend rápida y optimizada.",
       url: "https://vitejs.dev/",
     },
@@ -43,7 +43,7 @@ export const technologies = {
     },
     {
       name: "pnpm",
-      icon: "/images/pnpm.svg",
+      icon: "/images/pnpm-optimized.svg",
       description: "Gestor de paquetes rápido y eficiente en espacio de disco.",
       url: "https://pnpm.io/",
     },
@@ -114,7 +114,7 @@ export const technologies = {
     },
     {
       name: "Zustand",
-      icon: "/images/zustand.svg",
+      icon: "/images/zustand-optimized.svg",
       description:
         "Librería minimalista de manejo de estado global para React con excelente performance.",
       url: "https://github.com/pmndrs/zustand",

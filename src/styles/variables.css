@@ -1,40 +1,39 @@
 :root {
   /* ===== TIPOGRAFÍA ===== */
-  --font-sans: "Inter", "Segoe UI", "Roboto", -apple-system, BlinkMacSystemFont,
-    sans-serif;
+  --font-sans:
+    "Inter", "Segoe UI", "Roboto", -apple-system, BlinkMacSystemFont, sans-serif;
   --font-mono: "JetBrains Mono", "Fira Code", "Courier New", monospace;
   --font-serif: "Georgia", "Times New Roman", serif;
 
   /* ===== ESCALA DE TAMAÑOS DE FUENTE ===== */
-  /* Encabezados - Escala armónica (1.25 ratio) */
-  --font-size-h1: 3.5rem;    /* 56px */
-  --font-size-h2: 2.75rem;   /* 44px */
-  --font-size-h3: 2.2rem;    /* 35px */
-  --font-size-h4: 1.75rem;   /* 28px */
-  --font-size-h5: 1.4rem;    /* 22px */
-  --font-size-h6: 1.125rem;  /* 18px */
+  --font-size-h1: 3.5rem; /* 56px */
+  --font-size-h2: 2.75rem; /* 44px */
+  --font-size-h3: 2.2rem; /* 35px */
+  --font-size-h4: 1.75rem; /* 28px */
+  --font-size-h5: 1.4rem; /* 22px */
+  --font-size-h6: 1.125rem; /* 18px */
 
   /* Texto base */
-  --font-size-lead: 1.25rem;    /* 20px - Introducción destacada */
-  --font-size-large: 1.125rem;  /* 18px - Texto grande */
-  --font-size-base: 1rem;       /* 16px - Base estándar */
+  --font-size-lead: 1.25rem; /* 20px - Introducción destacada */
+  --font-size-large: 1.125rem; /* 18px - Texto grande */
+  --font-size-base: 1rem; /* 16px - Base estándar */
   --font-size-medium: 0.9375rem; /* 15px - Texto estándar */
-  --font-size-small: 0.875rem;  /* 14px - Texto pequeño */
-  --font-size-xs: 0.75rem;      /* 12px - Muy pequeño */
+  --font-size-small: 0.875rem; /* 14px - Texto pequeño */
+  --font-size-xs: 0.75rem; /* 12px - Muy pequeño */
   --font-size-caption: 0.6875rem; /* 11px - Caption */
 
   /* Componentes */
-  --font-size-button: 0.875rem;  /* 14px */
-  --font-size-input: 1rem;       /* 16px */
-  --font-size-label: 0.875rem;   /* 14px */
-  --font-size-display: 4.5rem;   /* 72px - Display/Hero */
+  --font-size-button: 0.875rem; /* 14px */
+  --font-size-input: 1rem; /* 16px */
+  --font-size-label: 0.875rem; /* 14px */
+  --font-size-display: 4.5rem; /* 72px - Display/Hero */
 
   /* ===== PROPIEDADES TIPOGRÁFICAS ===== */
   /* Line Heights */
-  --line-height-tight: 1.2;      /* Para encabezados */
-  --line-height-normal: 1.5;     /* Para texto base */
-  --line-height-relaxed: 1.75;   /* Para párrafos largos */
-  --line-height-loose: 2;        /* Para textos muy espaciados */
+  --line-height-tight: 1.2; /* Para encabezados */
+  --line-height-normal: 1.5; /* Para texto base */
+  --line-height-relaxed: 1.75; /* Para párrafos largos */
+  --line-height-loose: 2; /* Para textos muy espaciados */
 
   /* Letter Spacing */
   --letter-spacing-tight: -0.02em;

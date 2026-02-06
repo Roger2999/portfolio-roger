@@ -33,7 +33,9 @@ export const PortfolioApp = () => {
           />
         </div>
         <div className="buttons-container flex gap-5 mr-10">
-          <ThemeButton className="sm:hidden" />
+          <LazyMotion features={domAnimation}>
+            <ThemeButton className="sm:hidden" />
+          </LazyMotion>
           <HamburgerButton onOpenMenu={handleMenu} openMenu={openMenu} />
         </div>
       </Header>

@@ -33,7 +33,7 @@ export const ThemeButton = ({ className, ...props }: ThemeButtonProps) => {
             exit={{ opacity: 0, rotate: 90 }}
             src={iconLightMode}
             alt="icono de tema claro"
-            loading="lazy"
+            loading="eager"
             decoding="async"
             width={25}
             height={25}
@@ -46,7 +46,7 @@ export const ThemeButton = ({ className, ...props }: ThemeButtonProps) => {
             exit={{ opacity: 0, rotate: 90 }}
             src={iconDarkMode}
             alt="icono de tema oscuro"
-            loading="lazy"
+            loading="eager"
             decoding="async"
             width={25}
             height={25}

@@ -15,6 +15,8 @@ export const ThemeImg = ({ srcDark, srcLight, width, height }: Props) => {
       height={height}
       alt="logo de la web"
       className="logo rounded-full ml-10 bg-cover w-12 h-12"
+      loading="eager"
+      decoding="async"
     />
   );
 };
