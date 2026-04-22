@@ -7,12 +7,8 @@ import {
 import { useThemeStore } from "../stores/themeStore";
 import { getButtonThemeClasses } from "../helpers/getButtonThemeClasses";
 import { projects } from "../data/projectsData";
-<<<<<<< HEAD
 import { ProjectCard } from "../components/ProjectCard/ProjectCard";
-=======
 
-import { motion } from "motion/react";
->>>>>>> 63e4186c67d39ff41718fbd2e2442e1e875afd57
 export const Main = () => {
   const theme = useThemeStore((state) => state.theme);
 
@@ -25,7 +21,7 @@ export const Main = () => {
             target="_blank"
             rel="noopener noreferrer"
             className={`gap-3 rounded-md h-fit py-1 text-sm font-bold px-5 ${getButtonThemeClasses(
-              theme,
+              theme
             )}`}
             label="Disponible para trabajar"
             state="available"
@@ -50,7 +46,11 @@ export const Main = () => {
           />
           <ButtonLink
             label="GitHub"
-            icon={`${theme === "dark" ? "/images/icon-github-dark.svg" : "/images/icon-github.svg"}`}
+            icon={`${
+              theme === "dark"
+                ? "/images/icon-github-dark.svg"
+                : "/images/icon-github.svg"
+            }`}
             href="https://github.com/roger2999"
             target="_blank"
             rel="noopener noreferrer"
