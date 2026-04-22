@@ -13,7 +13,7 @@ import { Aside } from "./layouts/Aside";
 import { domAnimation, LazyMotion } from "motion/react";
 import { Footer } from "./layouts/Footer";
 
-export const RootLayout = ({ children }: { children: ReactNode }) => {
+export const LayoutRoot = ({ children }: { children: ReactNode }) => {
   const [openMenu, setOpenMenu] = useState<boolean>(false);
 
   const handleMenu = () => {
@@ -52,7 +52,10 @@ export const RootLayout = ({ children }: { children: ReactNode }) => {
         <LazyMotion features={domAnimation} strict>
           <Suspense fallback={<div>Cargando...</div>}></Suspense>
         </LazyMotion>
-        <main>{children}</main>
+        <main className="portfolio-container main flex-1 pt-32 p-5">
+          {" "}
+          {children}
+        </main>
         <footer className="footer py-6 px-4">
           {" "}
           <Footer />

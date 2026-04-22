@@ -12,7 +12,7 @@ export const Main = () => {
   const theme = useThemeStore((state) => state.theme);
 
   return (
-    <main className="portfolio-container main flex-1 pt-32 p-5">
+    <>
       <section id="home" className="home flex flex-col gap-8 m-auto">
         <MiniCard profilePhoto={"/images/profile-photo.webp"}>
           <ButtonLink
@@ -107,6 +107,6 @@ export const Main = () => {
           </p>
         </article>
       </section>
-    </main>
+    </>
   );
 };
