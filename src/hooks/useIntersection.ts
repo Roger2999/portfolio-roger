@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-export const useIntersection = (sectionsIs: string[]) => {
+export const useIntersection = (sectionsIds: string[]) => {
   const [activeLink, setActiveLink] = useState<string>("home");
   useEffect(() => {
     const options: IntersectionObserverInit = {
@@ -15,7 +15,7 @@ export const useIntersection = (sectionsIs: string[]) => {
         }
       });
     }, options);
-    sectionsIs.forEach((id) => {
+    sectionsIds.forEach((id) => {
       const element = document.getElementById(id);
       if (element) {
         observer.observe(element);
@@ -24,7 +24,7 @@ export const useIntersection = (sectionsIs: string[]) => {
     return () => {
       observer.disconnect();
     };
-  }, [sectionsIs]);
+  }, [sectionsIds]);
 
   return { activeLink, setActiveLink };
 };

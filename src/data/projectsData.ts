@@ -1,13 +1,13 @@
-import spaceTouristImg from "../assets/Projects/SpaceTourist.webp";
-import openWeatherImg from "../assets/Projects/OpenWeather.webp";
-import portfolioImg from "../assets/Projects/webPortfolio.webp";
+import spaceTouristImg from "/images/Projects/SpaceTourist.webp";
+import openWeatherImg from "/images/Projects/OpenWeather.webp";
+import portfolioImg from "/images/Projects/webPortfolio.webp";
 export const projects = [
   {
     title: "Space Tourist",
     description:
       "Una experiencia inmersiva para explorar destinos espaciales, conocer a la tripulación y descubrir la tecnología utilizada en misiones espaciales.",
     image: spaceTouristImg,
-    stack: ["React", "TypeScript", "Tailwind CSS", " Vite", "Zustand"],
+    stack: ["React", "TypeScript", "Tailwind CSS", "Vite", "Zustand"],
     urlPreview: "https://space-tourist.vercel.app/",
     urlGithub: "https://github.com/Roger2999/Space-tourist-app.git",
   },
@@ -20,9 +20,9 @@ export const projects = [
       "React",
       "TypeScript",
       "Tailwind CSS",
-      " Vite",
-      " Zustand",
-      " OpenWeather API",
+      "Vite",
+      "Zustand",
+      "OpenWeather API",
     ],
     urlPreview: "https://open-weather-cu.vercel.app/",
     urlGithub: "https://github.com/Roger2999/WeatherApp-v2.git",
@@ -37,8 +37,8 @@ export const projects = [
       "TypeScript",
       "Tailwind CSS",
       "Vite",
-      " Zustand",
-      " Supabase",
+      "Zustand",
+      "Supabase",
     ],
     urlPreview: "https://roger-web-portfolio.vercel.app/",
     urlGithub: "https://github.com/Roger2999/Portfolio-2.git",

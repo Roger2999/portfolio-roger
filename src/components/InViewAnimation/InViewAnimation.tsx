@@ -1,19 +1,19 @@
 import { motion, useInView, type Variants } from "motion/react";
 import { useRef, type ReactNode } from "react";
-
 interface Props {
   children: ReactNode;
   once?: boolean;
   className?: string;
-  margin?: string;
+  margin?: `${number}px ${number}px ${number}px ${number}px` | undefined;
   amount?: number;
   variants?: Variants;
 }
 export const InViewAnimation = ({
   children,
   className,
+  margin = "100px 0px 0px 0px",
   variants,
-  amount = 0.3,
+  amount = 0.1,
   once = false,
 }: Props) => {
   const defaultVariants: Variants = {
@@ -21,12 +21,12 @@ export const InViewAnimation = ({
     visible: {
       opacity: 1,
       y: 0,
-      transition: { type: "spring", stiffness: 40, damping: 10 },
+      transition: { type: "spring", stiffness: 60, damping: 20 },
     },
   };
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, {
-    margin: "100px 0px 0px 0px",
+    margin,
     amount,
     once,
   });
@@ -37,7 +37,7 @@ export const InViewAnimation = ({
       variants={variants || defaultVariants}
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
-      exit="hidden"
+      exit={"hidden"}
     >
       {children}
     </motion.div>

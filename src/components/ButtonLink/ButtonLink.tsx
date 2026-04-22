@@ -1,28 +1,34 @@
+interface ImgProps extends React.ComponentPropsWithRef<"img"> {
+  className?: string;
+}
 interface ButtonProps extends React.ComponentPropsWithRef<"a"> {
   className?: string;
   label?: string;
   icon?: string;
-  imgWidth?: string;
-  imgHeigth?: string;
   state?: "available" | "busy" | undefined;
+  imgProps?: ImgProps;
 }
 export const ButtonLink = ({
   className,
-  label = "label",
+  label,
   icon,
   state,
+  imgProps,
   ...props
 }: ButtonProps) => {
-  const baseClasses = "flex rounded-2xl";
+  const baseClasses = "flex justify-center items-center rounded-2xl";
   return (
     <a {...props} className={`links-btn ${baseClasses} ${className || ""}`}>
       {icon && (
         <img
           src={icon}
-          alt="icono de link"
+          alt="link-icon"
           loading="lazy"
           decoding="async"
-          className={`flex items-center justify-center w-6 h-6`}
+          width={24}
+          height={24}
+          {...imgProps}
+          className={`flex items-center justify-center ${imgProps?.className || ""}`}
         />
       )}
       {state && (
@@ -32,9 +38,13 @@ export const ButtonLink = ({
           } animate-ping`}
         />
       )}
-      <span className={`flex justify-center items-center text-center text-xs`}>
-        {label}
-      </span>
+      {label && (
+        <span
+          className={`flex justify-center items-center text-center text-xs`}
+        >
+          {label}
+        </span>
+      )}
     </a>
   );
 };

@@ -3,30 +3,20 @@ interface Props {
   srcDark: string;
   srcLight: string;
   width: number;
-  heigth: number;
+  height: number;
 }
-export const ThemeImg = ({ srcDark, srcLight, width, heigth }: Props) => {
+export const ThemeImg = ({ srcDark, srcLight, width, height }: Props) => {
   const theme = useThemeStore((state) => state.theme);
 
   return (
-    <>
-      {theme === "dark" ? (
-        <img
-          src={srcDark}
-          width={width}
-          height={heigth}
-          alt="logo de la web"
-          className="logo rounded-full ml-10 bg-cover"
-        />
-      ) : (
-        <img
-          src={srcLight}
-          width={width}
-          height={heigth}
-          alt="logo de la web"
-          className="logo rounded-full ml-10 bg-cover"
-        />
-      )}
-    </>
+    <img
+      src={theme === "dark" ? srcDark : srcLight}
+      width={width}
+      height={height}
+      alt="logo de la web"
+      className="logo rounded-full ml-10 bg-cover w-12 h-12"
+      loading="eager"
+      decoding="async"
+    />
   );
 };
