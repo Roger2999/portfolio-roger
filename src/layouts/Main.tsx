@@ -7,8 +7,7 @@ import {
 import { useThemeStore } from "../stores/themeStore";
 import { getButtonThemeClasses } from "../helpers/getButtonThemeClasses";
 import { projects } from "../data/projectsData";
-import { ProjectCard } from "../components/ProjectCard/ProjectCard";
-
+import { motion } from "motion/react";
 export const Main = () => {
   const theme = useThemeStore((state) => state.theme);
 

@@ -82,12 +82,6 @@ export const technologies = {
       description: "Framework CSS para desarrollo frontend responsive y móvil.",
       url: "https://getbootstrap.com/",
     },
-    {
-      name: "Shadcn",
-      icon: materialUIIcon,
-      description: "Descripcion shadcn",
-      url: "https://mui.com/",
-    },
   ],
 
   reactLibraries: [
@@ -139,12 +133,6 @@ export const technologies = {
       icon: "/images/firebase.svg",
       description:
         "Plataforma de Google para desarrollo de aplicaciones con backend serverless, base de datos y autenticación.",
-      url: "https://firebase.google.com/",
-    },
-    {
-      name: "Prisma ORM",
-      icon: firebaseIcon,
-      description: "Descripcion prisma",
       url: "https://firebase.google.com/",
     },
   ],

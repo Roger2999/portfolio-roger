@@ -5,5 +5,5 @@ interface Props {
   openMenu: boolean;
 }
 export const Aside = ({ children, openMenu }: Props) => {
-  return <aside>{openMenu && children}</aside>;
+  return <>{openMenu && children}</>;
 };

@@ -6,7 +6,7 @@ interface Props {
 }
 export const NavMenu = ({ children }: Props) => {
   return (
-    <header className="header flex justify-between items-center absolute top-5 w-full h-20">
+    <>
       {/* logo */}
       <ThemeImg
         srcDark={"/images/icon-logo-dark.png"}
@@ -15,6 +15,6 @@ export const NavMenu = ({ children }: Props) => {
         height={75}
       />
       {children}
-    </header>
+    </>
   );
 };
