@@ -6,14 +6,14 @@ import codeIcon from "/images/icon-code.png";
 import { useThemeStore } from "../../stores/themeStore";
 import { InViewAnimation } from "../../components";
 import { cn } from "../../helpers/cn";
-
+import interrogateIcon from "../../../public/images/icon-preview-button.png";
 interface Props {
   title: string;
   description: string;
   stack: string[];
   previewLink: string;
   codeLink: string;
-  img: string;
+  img?: string;
 }
 export const ProjectCard = ({
   title,
@@ -29,14 +29,14 @@ export const ProjectCard = ({
       <a href={previewLink} target="_blank" rel="noopener noreferrer">
         <figure className={cn(styles.projectImage, "rounded-2xl")}>
           <img
-            src={img}
+            src={img ?? interrogateIcon}
             width={300}
             height={200}
             alt={title}
             aria-label={title}
             loading="lazy"
             decoding="async"
-            className="object-cover object-center rounded-2xl"
+            className="object-cover object-center rounded-2xl w-full h-full"
           />
         </figure>
       </a>
