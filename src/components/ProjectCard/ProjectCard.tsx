@@ -5,6 +5,7 @@ import previewIconLight from "/images/icon-world-light.png";
 import codeIcon from "/images/icon-code.png";
 import { useThemeStore } from "../../stores/themeStore";
 import { InViewAnimation } from "../../components";
+import { cn } from "../../helpers/cn";
 
 interface Props {
   title: string;
@@ -26,7 +27,7 @@ export const ProjectCard = ({
   return (
     <InViewAnimation className={styles.projectContainer}>
       <a href={previewLink} target="_blank" rel="noopener noreferrer">
-        <figure className={`${styles.projectImage} rounded-2xl`}>
+        <figure className={cn(styles.projectImage, "rounded-2xl")}>
           <img
             src={img}
             width={300}
@@ -64,7 +65,7 @@ export const ProjectCard = ({
           imgProps={{ className: "w-6 h-6" }}
         />
       </div>
-      <div className={`${styles.projectInfo}`}>
+      <div className={styles.projectInfo}>
         <h5>{title}</h5>
         <p>{description}</p>
       </div>

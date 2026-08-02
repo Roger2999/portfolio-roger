@@ -2,6 +2,8 @@
 @import "./variables.css";
 @import "./themes.css";
 
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
 * {
   box-sizing: border-box;
 }
@@ -114,6 +116,7 @@ main section {
   max-width: 100%;
   margin-bottom: 5rem;
 }
+
 
 #home,
 #projects,

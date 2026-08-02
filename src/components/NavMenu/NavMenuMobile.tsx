@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { useThemeStore } from "../../stores/themeStore";
+import { cn } from "../../helpers/cn";
 
 interface NavMenuMobileProps {
   activeLink: string;
@@ -15,7 +15,6 @@ export const NavMenuMobile = ({
   setOpenMenu,
   navigation,
 }: NavMenuMobileProps) => {
-  const theme = useThemeStore((state) => state.theme);
   const handleMenuPropagation = (e: React.MouseEvent<HTMLDivElement>) => {
     e.stopPropagation();
   };
@@ -48,11 +47,9 @@ export const NavMenuMobile = ({
       <nav
         id="nav-menu-mobile"
         onClick={handleMenuPropagation}
-        className={`nav-mobile-menu fixed right-0 h-full w-60 max-w-[80%] sm:hidden rounded-l-2xl ${
-          theme === "dark"
-            ? "backdrop-blur-xs bg-white/50"
-            : "backdrop-blur-3xl bg-black/30"
-        }`}
+        className={cn(
+          "nav-mobile-menu fixed right-0 h-full w-60 max-w-[80%] sm:hidden rounded-l-2xl bg-gray-300/80 dark:bg-black/70 border-l-6 dark:border-l-gray-600/50 border-l-gray-600 ",
+        )}
       >
         <ul className="flex flex-col pt-28 gap-8 justify-center items-start pl-10">
           {navigation.map((nav) => (
@@ -60,9 +57,10 @@ export const NavMenuMobile = ({
               <a
                 href={`#${nav.routes}`}
                 onClick={() => setActiveLink(nav.routes)}
-                className={`pb-2 ${
-                  activeLink === nav.routes ? "border-b-4" : ""
-                }`}
+                className={cn(
+                  "pb-2 font-bold",
+                  activeLink === nav.routes && "border-b-4",
+                )}
                 aria-current={activeLink === nav.routes ? "page" : undefined}
               >
                 {nav.name}

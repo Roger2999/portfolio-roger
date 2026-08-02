@@ -5,7 +5,8 @@ import {
   TechnologiesSection,
 } from "../components";
 import { useThemeStore } from "../stores/themeStore";
-import { getButtonThemeClasses } from "../helpers/getButtonThemeClasses";
+import { buttonThemeClasses } from "../helpers/getButtonThemeClasses";
+import { cn } from "../helpers/cn";
 import { projects } from "../data/projectsData";
 import { motion } from "motion/react";
 export const Main = () => {
@@ -19,9 +20,10 @@ export const Main = () => {
             href="https://www.linkedin.com/in/roger-gutierrez-martinez"
             target="_blank"
             rel="noopener noreferrer"
-            className={`gap-3 rounded-md h-fit py-1 text-sm font-bold px-5 ${getButtonThemeClasses(
-              theme
-            )}`}
+            className={cn(
+              "gap-3 rounded-md h-fit py-1 text-sm font-bold px-5",
+              buttonThemeClasses,
+            )}
             label="Disponible para trabajar"
             state="available"
           />
@@ -40,7 +42,7 @@ export const Main = () => {
             href="https://wa.me/+5354849352"
             target="_blank"
             rel="noopener noreferrer"
-            className={`px-5 py-1 gap-3 ${getButtonThemeClasses(theme)}`}
+            className={cn("px-5 py-1 gap-3", buttonThemeClasses)}
             imgProps={{ className: "w-6 h-6" }}
           />
           <ButtonLink
@@ -53,7 +55,7 @@ export const Main = () => {
             href="https://github.com/roger2999"
             target="_blank"
             rel="noopener noreferrer"
-            className={`px-5 py-1 gap-3 ${getButtonThemeClasses(theme)}`}
+            className={cn("px-5 py-1 gap-3", buttonThemeClasses)}
             imgProps={{ className: "w-6 h-6" }}
           />
         </div>

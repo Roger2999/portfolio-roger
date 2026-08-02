@@ -1,3 +1,5 @@
+import { cn } from "../../helpers/cn";
+
 interface ImgProps extends React.ComponentPropsWithRef<"img"> {
   className?: string;
 }
@@ -18,7 +20,7 @@ export const ButtonLink = ({
 }: ButtonProps) => {
   const baseClasses = "flex justify-center items-center rounded-2xl";
   return (
-    <a {...props} className={`links-btn ${baseClasses} ${className || ""}`}>
+    <a {...props} className={cn("links-btn", baseClasses, className)}>
       {icon && (
         <img
           src={icon}
@@ -28,20 +30,20 @@ export const ButtonLink = ({
           width={24}
           height={24}
           {...imgProps}
-          className={`flex items-center justify-center ${imgProps?.className || ""}`}
+          className={cn("flex items-center justify-center", imgProps?.className)}
         />
       )}
       {state && (
         <div
-          className={`rounded-full min-w-3 h-3 ${
-            state === "available" ? "bg-green-400" : "bg-amber-400"
-          } animate-ping`}
+          className={cn(
+            "rounded-full min-w-3 h-3",
+            state === "available" ? "bg-green-400" : "bg-amber-400",
+            "animate-ping"
+          )}
         />
       )}
       {label && (
-        <span
-          className={`flex justify-center items-center text-center text-xs`}
-        >
+        <span className="flex justify-center items-center text-center text-xs">
           {label}
         </span>
       )}

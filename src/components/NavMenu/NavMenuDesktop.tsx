@@ -1,5 +1,5 @@
-import { useThemeStore } from "../../stores/themeStore";
 import { ThemeButton } from "../../components";
+import { cn } from "../../helpers/cn";
 interface NavMenuProps {
   activeLink: string;
   setActiveLink: (link: string) => void;
@@ -10,15 +10,11 @@ export const NavMenuDesktop = ({
   setActiveLink,
   navigation,
 }: NavMenuProps) => {
-  const theme = useThemeStore((state) => state.theme);
-
   return (
     <nav
-      className={`nav-desktop-container hidden fixed top-10 z-10 sm:flex sm:gap-12 justify-center items-center w-125 h-10 rounded-3xl ${
-        theme === "dark"
-          ? "bg-white/20 border-white/20 backdrop-blur-xs"
-          : "bg-white/50 backdrop-blur-xs shadow-2xl shadow-gray-800"
-      }`}
+      className={cn(
+        "nav-desktop-container hidden fixed top-10 z-10 sm:flex sm:gap-12 justify-center items-center w-125 h-10 rounded-3xl bg-white/50 backdrop-blur-xs shadow-2xl shadow-gray-800 dark:bg-white/20 dark:border-white/20 dark:shadow-none",
+      )}
     >
       <ul className="flex gap-8 justify-center items-center">
         {navigation.map((nav) => (
@@ -26,9 +22,10 @@ export const NavMenuDesktop = ({
             <a
               href={`#${nav.routes}`}
               onClick={() => setActiveLink(nav.routes)}
-              className={`pb-2 transition-all duration-150 ease ${
-                activeLink === nav.routes ? "text-blue-500" : ""
-              }`}
+              className={cn(
+                "pb-2 font-bold transition-all duration-150 ease",
+                activeLink === nav.routes && "text-blue-500",
+              )}
               aria-current={activeLink === nav.routes ? "page" : undefined}
             >
               {nav.name}

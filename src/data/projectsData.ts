@@ -1,16 +1,44 @@
 import spaceTouristImg from "/images/Projects/SpaceTourist.webp";
 import openWeatherImg from "/images/Projects/OpenWeather.webp";
-import portfolioImg from "/images/Projects/webPortfolio.webp";
+import userManagementImg from "/images/Projects/UserManagementSystem.png";
+import countriesExplorerImg from "/images/Projects/CountriesExplorer.png";
+
 export const projects = [
   {
-    title: "Space Tourist",
+    title: "User Management System",
     description:
-      "Una experiencia inmersiva para explorar destinos espaciales, conocer a la tripulación y descubrir la tecnología utilizada en misiones espaciales.",
-    image: spaceTouristImg,
-    stack: ["React", "TypeScript", "Tailwind CSS", "Vite", "Zustand"],
-    urlPreview: "https://space-tourist.vercel.app/",
-    urlGithub: "https://github.com/Roger2999/Space-tourist-app.git",
+      "Sistema para la gestión de cuentas de usuarios, construido con Next.js, Better Auth y Prisma.",
+    image: userManagementImg,
+    stack: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Prisma",
+      "Better Auth",
+      "PostgreSQL",
+      "shadcn/ui",
+      "Zod",
+    ],
+    urlPreview: "https://sigel-eemtz.vercel.app",
+    urlGithub: "https://github.com/Roger2999/user-management-system.git",
   },
+
+  {
+    title: "Countries Explorer",
+    description:
+      "Explorador de países con búsqueda por nombre, filtro por región y página de detalle con población, monedas, idiomas y países fronterizos, consumiendo la API REST Countries.",
+    image: countriesExplorerImg,
+    stack: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "shadcn/ui",
+      "REST Countries API",
+    ],
+    urlPreview: "https://countries-explorer-nextjs.vercel.app",
+    urlGithub: "https://github.com/Roger2999/countries-explorer-nextjs.git",
+  },
+
   {
     title: "Open Weather",
     description:
@@ -28,19 +56,12 @@ export const projects = [
     urlGithub: "https://github.com/Roger2999/WeatherApp-v2.git",
   },
   {
-    title: "Portfolio Website",
+    title: "Space Tourist",
     description:
-      "Sitio web personal para mostrar mis proyectos, habilidades y experiencia como desarrollador frontend.",
-    image: portfolioImg,
-    stack: [
-      "React",
-      "TypeScript",
-      "Tailwind CSS",
-      "Vite",
-      "Zustand",
-      "Supabase",
-    ],
-    urlPreview: "https://roger-web-portfolio.vercel.app/",
-    urlGithub: "https://github.com/Roger2999/Portfolio-2.git",
+      "Una experiencia inmersiva para explorar destinos espaciales, conocer a la tripulación y descubrir la tecnología utilizada en misiones espaciales.",
+    image: spaceTouristImg,
+    stack: ["React", "TypeScript", "Tailwind CSS", "Vite", "Zustand"],
+    urlPreview: "https://space-tourist.vercel.app/",
+    urlGithub: "https://github.com/Roger2999/Space-tourist-app.git",
   },
 ];

@@ -23,7 +23,7 @@ export const HamburgerButton = ({ onOpenMenu, openMenu }: Props) => {
           width={40}
           height={40}
           alt="icono de menú lateral"
-          className="hamburger-menu rounded-full bg-cover"
+          className="hamburger-menu rounded-full bg-cover min-w-6 min-h-6"
         />
       ) : (
         <img src={iconClose} alt="cerrar menú" width={30} height={30} />

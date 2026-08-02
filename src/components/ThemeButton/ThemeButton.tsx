@@ -1,7 +1,6 @@
 import { useThemeStore } from "../../stores/themeStore";
-import iconDarkMode from "/images/icon-dark.png";
-import iconLightMode from "/images/icon-light.png";
-import { motion, AnimatePresence } from "motion/react";
+import { Moon, Sun } from "lucide-react";
+import { cn } from "../../helpers/cn";
 interface ThemeButtonProps extends React.ComponentPropsWithRef<"button"> {
   className?: string;
 }
@@ -11,48 +10,21 @@ export const ThemeButton = ({ className, ...props }: ThemeButtonProps) => {
   const toggleTheme = useThemeStore((state) => state.toggleTheme);
   return (
     <button
-      className={`flex justify-center items-center w-20 h-10 rounded-full border cursor-pointer ${
-        className || ""
-      } ${
-        theme === "dark"
-          ? "bg-white/10 border-white/20"
-          : "bg-black/10 border-black/10"
-      }`}
+      className={cn(
+        "flex justify-center items-center p-1 rounded-full cursor-pointer bg-surface/40 border border-black/10 dark:border-none dark:bg-surface/20",
+        className,
+      )}
       {...props}
       aria-label={
         theme === "dark" ? "Cambiar a tema claro" : "Cambiar a tema oscuro"
       }
       onClick={toggleTheme}
     >
-      <AnimatePresence mode="wait">
-        {theme === "dark" ? (
-          <motion.img
-            key={"ligth"}
-            initial={{ opacity: 0, rotate: -90 }}
-            animate={{ opacity: 1, rotate: 0 }}
-            exit={{ opacity: 0, rotate: 90 }}
-            src={iconLightMode}
-            alt="icono de tema claro"
-            loading="eager"
-            decoding="async"
-            width={25}
-            height={25}
-          />
-        ) : (
-          <motion.img
-            key={"dark"}
-            initial={{ opacity: 0, rotate: -90 }}
-            animate={{ opacity: 1, rotate: 0 }}
-            exit={{ opacity: 0, rotate: 90 }}
-            src={iconDarkMode}
-            alt="icono de tema oscuro"
-            loading="eager"
-            decoding="async"
-            width={25}
-            height={25}
-          />
-        )}
-      </AnimatePresence>
+      {theme === "dark" ? (
+        <Sun className="text-yellow-400 " />
+      ) : (
+        <Moon className="text-shadow-slate-700" />
+      )}
     </button>
   );
 };
