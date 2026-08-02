@@ -30,7 +30,10 @@ export const ButtonLink = ({
           width={24}
           height={24}
           {...imgProps}
-          className={cn("flex items-center justify-center", imgProps?.className)}
+          className={cn(
+            "flex items-center justify-center",
+            imgProps?.className,
+          )}
         />
       )}
       {state && (
@@ -38,7 +41,7 @@ export const ButtonLink = ({
           className={cn(
             "rounded-full min-w-3 h-3",
             state === "available" ? "bg-green-400" : "bg-amber-400",
-            "animate-ping"
+            "animate-ping",
           )}
         />
       )}

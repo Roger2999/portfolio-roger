@@ -2,6 +2,10 @@
 @import "./variables.css";
 @import "./themes.css";
 
+@theme {
+  --breakpoint-xs:380px
+}
+
 @custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
 
 * {
@@ -101,22 +105,12 @@ a {
     opacity 0.2s ease;
 }
 
-a:hover {
-  color: var(--color-primary-light);
-  opacity: 0.8;
-}
-
-a:active {
-  color: var(--color-primary-dark);
-}
-
 /* ===== ELEMENTOS ESTRUCTURALES ===== */
 main section {
   width: 40rem;
   max-width: 100%;
   margin-bottom: 5rem;
 }
-
 
 #home,
 #projects,

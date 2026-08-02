@@ -28,7 +28,7 @@ export const Main = () => {
             state="available"
           />
         </MiniCard>
-        <h1 className="text-4xl sm:text-5xl">¡Hola, soy Roger!</h1>
+        <h1 className="text-4xl sm:text-5xl">¡Hola, soy Róger!</h1>
         <p className="text-justify">
           Desarrollador Frontend enfocado en construir{" "}
           <strong>interfaces limpias, accesibles y funcionales</strong> con

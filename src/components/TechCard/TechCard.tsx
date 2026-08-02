@@ -15,10 +15,10 @@ export const TechCard = <T extends Tech>({ title, data }: Props<T>) => {
     <InViewAnimation>
       <div
         className={cn(
-          "techcard-container p-3 rounded-xl shadow-xl bg-gray-200 border-gray-200 dark:bg-gray-800"
+          "techcard-container p-3 rounded-xl shadow-xl bg-gray-200 border-gray-200 dark:bg-gray-800",
         )}
       >
-        <h5 className="h-16 sm:h-10">{title}:</h5>
+        <h5 className="mb-6">{title}:</h5>
         <div className="tech-content grid grid-cols-2 gap-3">
           {data?.map((tech) => (
             <ButtonLink

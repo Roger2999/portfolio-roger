@@ -13,7 +13,7 @@ export const TechnologiesSection = () => {
         <strong> eficiencia, calidad y escalabilidad</strong> en los proyectos.
       </p>
 
-      <div className="grid grid-cols-2 gap-5">
+      <div className="grid xs:grid-cols-2 gap-5">
         <TechCard title="Lenguage" data={technologies.language} />
         <TechCard title="Library" data={technologies.libraries} />
         <TechCard title="Build tool" data={technologies.buildTools} />
