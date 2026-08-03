@@ -15,19 +15,8 @@ export const Main = () => {
   return (
     <>
       <section id="home" className="home flex flex-col gap-8 m-auto">
-        <MiniCard profilePhoto={"/images/profile-photo.webp"}>
-          <ButtonLink
-            href="https://www.linkedin.com/in/roger-gutierrez-martinez"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={cn(
-              "gap-3 rounded-md h-fit py-1 text-sm font-bold px-5",
-              buttonThemeClasses,
-            )}
-            label="Disponible para trabajar"
-            state="available"
-          />
-        </MiniCard>
+        <MiniCard profilePhoto={"/images/profile-photo.webp"} />
+
         <h1 className="text-4xl sm:text-5xl">¡Hola, soy Róger!</h1>
         <p className="text-justify">
           Desarrollador Frontend enfocado en construir{" "}

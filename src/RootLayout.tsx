@@ -1,11 +1,11 @@
 import { Suspense, useState, type ReactNode } from "react";
-import { NavMenu } from "./layouts/NavMenu";
 import {
   BackToTopButton,
   HamburgerButton,
   NavMenuDesktop,
   NavMenuMobile,
   ThemeButton,
+  ThemeImg,
 } from "./components";
 import { useIntersection } from "./hooks/useIntersection";
 import { navigation, sectionIds } from "./data/navigation";
@@ -23,20 +23,24 @@ export const LayoutRoot = ({ children }: { children: ReactNode }) => {
   return (
     <>
       <div className="app-container flex flex-col min-h-dvh w-full">
-        <header className="header flex justify-between items-center absolute top-5 w-full h-20">
-          <NavMenu>
-            <div className="nav-container flex justify-center items-center w-full h-full">
-              <NavMenuDesktop
-                activeLink={activeLink}
-                setActiveLink={setActiveLink}
-                navigation={navigation}
-              />
-            </div>
-            <div className="buttons-container flex gap-5 mr-10">
-              <ThemeButton className="sm:hidden" />
+        <header className="header flex justify-center items-center w-full h-20">
+          <ThemeImg
+            srcDark={"/images/icon-logo-dark.png"}
+            srcLight={"/images/icon-logo-light.png"}
+            width={75}
+            height={75}
+          />
+          <div className="nav-container flex justify-center items-center w-full h-full">
+            <NavMenuDesktop
+              activeLink={activeLink}
+              setActiveLink={setActiveLink}
+              navigation={navigation}
+            />
+            <div className="buttons-container flex justify-end gap-5 mr-10 w-full sm:hidden">
+              <ThemeButton className="relative top-5" />
               <HamburgerButton onOpenMenu={handleMenu} openMenu={openMenu} />
             </div>
-          </NavMenu>
+          </div>
         </header>
         <aside>
           <Aside openMenu={openMenu}>

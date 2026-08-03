@@ -13,7 +13,7 @@ export const NavMenuDesktop = ({
   return (
     <nav
       className={cn(
-        "nav-desktop-container hidden fixed top-10 z-10 sm:flex sm:gap-12 justify-center items-center w-125 h-10 rounded-3xl bg-white/50 backdrop-blur-xs shadow-2xl shadow-gray-800 dark:bg-white/20 dark:border-white/20 dark:shadow-none",
+        "nav-desktop-container hidden w-125 max-w-full fixed top-10 z-10 sm:flex justify-between items-center h-10 rounded-3xl bg-white/50 backdrop-blur-xs shadow-2xl shadow-gray-800 dark:bg-white/20 dark:border-white/20 dark:shadow-none px-10",
       )}
     >
       <ul className="flex gap-8 justify-center items-center">
@@ -33,7 +33,7 @@ export const NavMenuDesktop = ({
           </li>
         ))}
       </ul>
-      <ThemeButton className="w-fit h-fit sm:flex" />
+      <ThemeButton className="w-fit h-fit" />
     </nav>
   );
 };

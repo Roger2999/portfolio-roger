@@ -14,7 +14,7 @@ export const ThemeImg = ({ srcDark, srcLight, width, height }: Props) => {
       width={width}
       height={height}
       alt="logo de la web"
-      className="logo rounded-full ml-10 bg-cover w-12 h-12"
+      className="logo relative top-5 rounded-full ml-10 bg-cover w-12 h-12"
       loading="eager"
       decoding="async"
     />

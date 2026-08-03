@@ -48,7 +48,7 @@ export const NavMenuMobile = ({
         id="nav-menu-mobile"
         onClick={handleMenuPropagation}
         className={cn(
-          "nav-mobile-menu fixed right-0 h-full w-60 max-w-[80%] sm:hidden rounded-l-2xl bg-gray-300/80 dark:bg-black/70 border-l-6 dark:border-l-gray-600/50 border-l-gray-600 ",
+          "nav-mobile-menu fixed right-0 h-full w-xs max-w-[80%] sm:hidden rounded-l-2xl bg-gray-300/80 dark:bg-black/70 border-l-6 dark:border-l-gray-600/50 border-l-gray-600 ",
         )}
       >
         <ul className="flex flex-col pt-28 gap-8 justify-center items-start pl-10">

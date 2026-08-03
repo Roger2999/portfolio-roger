@@ -1,11 +1,13 @@
+import { cn } from "../../helpers/cn";
+import { buttonThemeClasses } from "../../helpers/getButtonThemeClasses";
+import { ButtonLink } from "../ButtonLink/ButtonLink";
 import profileSecondaryPhoto from "/images/profile-photo-secondary.png";
 interface Props {
-  children: React.ReactNode;
   profilePhoto?: string;
 }
-export const MiniCard = ({ children, profilePhoto }: Props) => {
+export const MiniCard = ({ profilePhoto }: Props) => {
   return (
-    <div className="flex items-center gap-5">
+    <div className="flex flex-col xs:flex-row items-center gap-5">
       <img
         src={profilePhoto ? profilePhoto : profileSecondaryPhoto}
         width={112}
@@ -14,7 +16,17 @@ export const MiniCard = ({ children, profilePhoto }: Props) => {
         alt="profile photo"
         className="rounded-full w-28 h-36 bg-cover"
       />
-      {children}
+      <ButtonLink
+        href="https://www.linkedin.com/in/roger-gutierrez-martinez"
+        target="_blank"
+        rel="noopener noreferrer"
+        className={cn(
+          "gap-3 rounded-md h-fit py-1 text-sm font-bold px-5",
+          buttonThemeClasses,
+        )}
+        label="Disponible para trabajar"
+        state="available"
+      />
     </div>
   );
 };
