@@ -12,7 +12,11 @@ export const HamburgerButton = ({ onOpenMenu, openMenu }: Props) => {
       aria-expanded={openMenu}
       aria-controls="nav-menu-mobile"
     >
-      {!openMenu ? <Menu className="size-8" /> : <X className="size-8" />}
+      {!openMenu ? (
+        <Menu className="size-8" />
+      ) : (
+        <X className="fixed right-10 top-10 size-8" />
+      )}
     </button>
   );
 };

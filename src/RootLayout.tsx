@@ -56,7 +56,7 @@ export const LayoutRoot = ({ children }: { children: ReactNode }) => {
         <LazyMotion features={domAnimation} strict>
           <Suspense fallback={<div>Cargando...</div>}></Suspense>
         </LazyMotion>
-        <main className="portfolio-container main flex-1 pt-32 p-5">
+        <main className="portfolio-container main flex-1 pt-20 p-5">
           {" "}
           {children}
         </main>
