@@ -6,7 +6,7 @@ import codeIcon from "/images/icon-code.png";
 import { useThemeStore } from "../../stores/themeStore";
 import { InViewAnimation } from "../../components";
 import { cn } from "../../helpers/cn";
-import interrogateIcon from "../../../public/images/icon-preview-button.png";
+import interrogateIcon from "/images/icon-preview-button.png";
 interface Props {
   title: string;
   description: string;
@@ -26,19 +26,43 @@ export const ProjectCard = ({
   const theme = useThemeStore((state) => state.theme);
   return (
     <InViewAnimation className={styles.projectContainer}>
-      <a href={previewLink} target="_blank" rel="noopener noreferrer">
-        <figure className={cn(styles.projectImage, "rounded-2xl")}>
-          <img
-            src={img ?? interrogateIcon}
-            width={300}
-            height={200}
-            alt={title}
+      <a
+        href={previewLink}
+        target="_blank"
+        rel="noopener noreferrer"
+        title={title}
+      >
+        {img ? (
+          <figure
+            className={cn(styles.projectImage, "rounded-2xl overflow-hidden")}
+          >
+            <img
+              src={img}
+              width={300}
+              height={200}
+              alt={title}
+              loading="lazy"
+              decoding="async"
+              className="object-cover object-center w-full h-full"
+            />
+          </figure>
+        ) : (
+          <div
+            className={cn(styles.projectImage, "rounded-2xl")}
+            role="img"
             aria-label={title}
-            loading="lazy"
-            decoding="async"
-            className="object-cover object-center rounded-2xl w-full h-full"
-          />
-        </figure>
+          >
+            <img
+              src={interrogateIcon}
+              alt=""
+              width={48}
+              height={48}
+              loading="lazy"
+              decoding="async"
+              className="object-contain w-12 h-12"
+            />
+          </div>
+        )}
       </a>
       <div className={styles.projectStack}>
         {stack.map((item) => (

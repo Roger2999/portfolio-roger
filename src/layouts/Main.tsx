@@ -5,7 +5,6 @@ import {
   TechnologiesSection,
 } from "../components";
 import { useThemeStore } from "../stores/themeStore";
-import { buttonThemeClasses } from "../helpers/getButtonThemeClasses";
 import { cn } from "../helpers/cn";
 import { projects } from "../data/projectsData";
 import { motion } from "motion/react";
@@ -15,8 +14,9 @@ export const Main = () => {
   return (
     <>
       <section id="home" className="home flex flex-col gap-8 m-auto">
-        <MiniCard profilePhoto={"/images/profile-photo.webp"} />
-
+        <div className="flex justify-center xs:justify-start">
+          <MiniCard profilePhoto={"/images/profile-photo.webp"} />
+        </div>
         <h1 className="text-4xl sm:text-5xl">¡Hola, soy Róger!</h1>
         <p className="text-justify">
           Desarrollador Frontend enfocado en construir{" "}
@@ -31,7 +31,7 @@ export const Main = () => {
             href="https://wa.me/+5354849352"
             target="_blank"
             rel="noopener noreferrer"
-            className={cn("px-5 py-1 gap-3", buttonThemeClasses)}
+            className={cn("px-5 py-1 gap-3")}
             imgProps={{ className: "w-6 h-6" }}
           />
           <ButtonLink
@@ -44,22 +44,16 @@ export const Main = () => {
             href="https://github.com/roger2999"
             target="_blank"
             rel="noopener noreferrer"
-            className={cn("px-5 py-1 gap-3", buttonThemeClasses)}
+            className={cn("px-5 py-1 gap-3")}
             imgProps={{ className: "w-6 h-6" }}
           />
         </div>
       </section>
-      <section
-        id="skills"
-        className="skills flex flex-col gap-5 m-auto sm:px-5"
-      >
+      <section id="skills" className="skills flex flex-col gap-5 m-auto">
         <h3>Tecnologías que domino</h3>
         <TechnologiesSection />
       </section>
-      <section
-        id="projects"
-        className="projects flex flex-col gap-5 px-5 m-auto"
-      >
+      <section id="projects" className="projects flex flex-col gap-5  m-auto">
         <h3 className="font-bold">Proyectos</h3>
         {projects.map((p) => (
           <ProjectCard
@@ -74,7 +68,7 @@ export const Main = () => {
         ))}
       </section>
 
-      <section id="about" className="about flex flex-col gap-5 px-5 m-auto">
+      <section id="about" className="about flex flex-col gap-5 m-auto">
         <h3 className="font-bold">Sobre mi</h3>
         <article className="flex flex-col items-center justify-center gap-10 sm:flex-row">
           <motion.img

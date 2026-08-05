@@ -15,13 +15,20 @@ export const technologies = {
     },
   ],
 
-  libraries: [
+  frameworks: [
     {
       name: "React",
       icon: "/images/react-original.svg",
       description:
         "Biblioteca JavaScript para construir interfaces de usuario.",
       url: "https://reactjs.org/",
+    },
+    {
+      name: "Next.js",
+      icon: "/images/nextjs.svg",
+      description:
+        "Framework de React para aplicaciones full-stack con renderizado en servidor y estático.",
+      url: "https://nextjs.org/",
     },
   ],
 
@@ -57,24 +64,17 @@ export const technologies = {
 
   uiFrameworks: [
     {
-      name: "Material-UI",
-      icon: "/images/materialui.svg",
+      name: "Tailwind CSS",
+      icon: "/images/tailwind.svg",
       description:
-        "Framework de React que implementa Material Design de Google.",
-      url: "https://mui.com/",
+        "Framework CSS utility-first para crear diseños personalizados rápidamente.",
+      url: "https://tailwindcss.com/",
     },
     {
       name: "DaisyUI",
       icon: "/images/daisyui.svg",
       description: "Framework de componentes para Tailwind CSS.",
       url: "https://daisyui.com/",
-    },
-    {
-      name: "Tailwind CSS",
-      icon: "/images/tailwind.svg",
-      description:
-        "Framework CSS utility-first para crear diseños personalizados rápidamente.",
-      url: "https://tailwindcss.com/",
     },
     {
       name: "Bootstrap",
@@ -85,6 +85,20 @@ export const technologies = {
   ],
 
   reactLibraries: [
+    {
+      name: "Material-UI",
+      icon: "/images/materialui.svg",
+      description:
+        "Framework de React que implementa Material Design de Google.",
+      url: "https://mui.com/",
+    },
+    {
+      name: "shadcn/ui",
+      icon: "/images/shadcn.svg",
+      description:
+        "Colección de componentes reutilizables y personalizables para React y Tailwind CSS.",
+      url: "https://ui.shadcn.com/",
+    },
     {
       name: "TanStack Query",
       icon: "/images/react-query-icon.svg",

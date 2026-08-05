@@ -14,13 +14,14 @@ export const TechnologiesSection = () => {
       </p>
 
       <div className="grid xs:grid-cols-2 gap-5">
-        <TechCard title="Lenguage" data={technologies.language} />
-        <TechCard title="Library" data={technologies.libraries} />
-        <TechCard title="Build tool" data={technologies.buildTools} />
-        <TechCard title="UI-Frameworks" data={technologies.uiFrameworks} />
-        <TechCard title="React Libreries" data={technologies.reactLibraries} />
-        <TechCard title="Package Manager" data={technologies.packageManagers} />
-        <TechCard title="Backend as a Service" data={technologies.backend} />
+        <TechCard title="Lenguajes" data={technologies.language} />
+        <TechCard title="Frameworks" data={technologies.frameworks} />
+        <TechCard title="Herramientas de Build" data={technologies.buildTools} />
+        <TechCard title="UI Frameworks" data={technologies.uiFrameworks} />
+        <TechCard title="Librerías React" data={technologies.reactLibraries} />
+        <TechCard title="Gestores de Paquetes" data={technologies.packageManagers} />
+        <TechCard title="Backend como Servicio" data={technologies.backend} />
+        <TechCard title="Control de Versiones" data={technologies.versionControl} />
       </div>
     </>
   );

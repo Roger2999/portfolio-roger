@@ -17,6 +17,7 @@ export const BackToTopButton = () => {
       <ButtonLink
         icon={theme === "light" ? arrowDark : arrowLight}
         href="#"
+        className="bg-transparent dark:bg-transparent active:bg-transparent dark:active:bg-transparent hover:bg-transparent dark:hover:bg-transparent"
         imgProps={{ className: "w-20 h-20" }}
       />
     </motion.div>

@@ -1,6 +1,7 @@
 import spaceTouristImg from "/images/Projects/SpaceTourist.webp";
 import openWeatherImg from "/images/Projects/OpenWeather.webp";
-import userManagementImg from "/images/Projects/UserManagementSystem.png";
+import userManagementImg from "/images/Projects/UserManagementSystem.webp";
+import countriesExplorer from "/images/Projects/CountriesExplorer.webp";
 
 export const projects = [
   {
@@ -26,7 +27,7 @@ export const projects = [
     title: "Countries Explorer",
     description:
       "Explorador de países con búsqueda por nombre, filtro por región y página de detalle con población, monedas, idiomas y países fronterizos, consumiendo la API REST Countries.",
-    image: undefined,
+    image: countriesExplorer,
     stack: [
       "Next.js",
       "TypeScript",

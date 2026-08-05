@@ -1,7 +1,7 @@
 import { Suspense } from "react";
 import { Main } from "./layouts/Main";
 import { domAnimation, LazyMotion } from "motion/react";
-import { LayoutRoot } from "./RootLayout";
+import { LayoutRoot } from "./LayoutRoot";
 
 export const PortfolioApp = () => {
   return (
